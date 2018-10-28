@@ -74,3 +74,6 @@ a:hover {
 #footer .copyright li a {
     color: inherit;
 }
+#footer .copyright li a:hover {
+    color: #016570
+}

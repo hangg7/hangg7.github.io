@@ -1,176 +1,248 @@
 <!doctype html>
 <html>
-<head>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128167050-1">
-</script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-128167050-1');
-</script>
-<script src="js/scramble.js"></script>
-<!--<script src="js/hidebib.js"></script>-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Hang Gao</title>
-
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/pygment_trac.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/special.css">
-<meta name="viewport" content="width=device-width">
-</head>
-
-<body>
-<div class="wrapper">
-<header>
-    <br />
-    <div align="center">
-        <span class="image avatar" >
-            <img src="assets/avatar.jpg" ></img>
-        </span>
-    </div>
-    <h1><b>Hang Gao</b></h1>
-
-    <p> 
-    <a href="https://github.com/cullengao">
-        <font color="#222"><i class="fa fa-github fa-2x"></i></font>
-    </a> &nbsp &nbsp
-
-    <!--  <span class="cv_right">
-        <a href="files/Ji_Lin_CV.pdf"><font size="4em" color="#222"><b>[CV]</b></font></a>
-        </span> -->
-    </p>
-    <br />
-
-    <h4>Contact:</h4>
-    <p>
-    <font face="courier" id="email" style="display:inline;">
-        lmng.gao@columabia.edu
-        <a href="#" onclick="emailScramble.initAnimatedBubbleSort();return false;">
-            unscramble
-        </a>
-    </font>
-    <script>
-        emailScramble = new scrambledString(document.getElementById('email'),
-            'emailScramble', 'luahoaa.goacinubg.@mde',
-            [12,13,15,1,8,7,2,5,4,11,18,10,17,3,22,16,6,19,9,14,21,20]);
-    </script>
-    </p>
-    </header>
-
-    <section class="outer">
-        <section  id="about">
-            <h2>About</h2>
-            <p>
-            I am a master student in Computer Science at <a href="https://www.columbia.edu/">Columbia University</a>, currently collaborating with Prof. <a href="https://people.eecs.berkeley.edu/~trevor://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a> at <a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research (BAIR)</a> as a research intern. Earlier back in Columbia, I worked at <a href="http://www.ee.columbia.edu/ln/dvmm/">Digital Video Multimedia Lab (DVMM)</a>, advised by Prof. <a href="http://www.ee.columbia.edu/~sfchang/">Shih-Fu Chang</a>.
-            </p>
-            <!--<p>-->
-            <!--I graduated from <a href="http://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a> with B.E. in Information Security. During my undergrad period, I worked with <a href="http://www.cs.cmu.edu/~anind/">Prof. Anind Dey</a> at <a href="http://ubicomplab.org/">Ubiquitous Computing Lab (UbicompLab)</a> and <a href="http://english.seiee.sjtu.edu.cn/english/detail/841_669.htm">Prof. Minglu Li</a> at <a href="http://wanglab.sjtu.edu.cn/en/Default.aspx">Wireless Networking and Artificial Intelligence Lab</a>.-->
-            <!--</p>-->
-            <p>
-            I am most interested in deep generative models and their
-            application - whether it be in their development, inference, or
-            more generally their foundations for computational and statistical
-            analysis.
-            </p>
-
-        </section>
-
-        <!-- Education -->
-        <section  id="education">
-            <h2>Timeline</h2>
-
-            <div class="media">
-                <span class="pull-left"><img src="assets/berkeley.png" width="96px" height="96px"/></span>
-                <div class="media-body">
-                    <p>
-                    <span style="font-weight: bold"> May 2018 - Present</span>
-                    </p>
-                    Department of Electrical Engineering and Computer Science,<br>
-                    <em>UC Berkeley</em>
-                    <p>Research Intern with Prof. Trevor Darrell</p>
-                </div>  
-            </div>
-            <div class="media">
-                <span class="pull-left"><img src="assets/columbia.png" width="96px" height="96px"/></span>
-                <div class="media-body">
-                    <p><span style="font-weight: bold">Sep 2017 - Dec 2018
-                        (Expected)</span>
-                    </p>
-                    Fu Foundation School of Engineering, <br>
-                    <em>Columbia University</em>
-                    <p>Master of Science in Computer Science</p>
-                </div>
-            </div>
-            <div class="media">
-                <span class="pull-left"><img src="assets/sjtu.png" width="96px" height="96px"/></span>
-                <div class="media-body">
-                    <p><span style="font-weight: bold">Sep 2013 - Jul
-                        2017</span></p>
-                    Department of Computer Science and Engineering,<br>
-                    <i>Shanghai Jiao Tong University</i>
-                    <p>Bachelor of Engineering in Information Security</p>
-                </div>  
-            </div>
-            <div class="media">
-                <span class="pull-left"><img src="assets/cmu.png" width="96px" height="96px"/></span>
-                <div class="media-body">
-                    <p><span style="font-weight: bold">Jul 2016 - Sep
-                        2016</span></p>
-                    Human-Computer Interaction Institute,<br>
-                    <i>Carnegie Mellon University</i>
-                    <p>Research Intern with Prof. Anind Dey</p>
-                </div>  
-            </div>
-        </section>
-        <section id='publications'>
-            <h2>Publications</h2>
-
-            <p><b>Low-shot Learning via Covariance-Preserving Adversarial Augmentation Networks</b> <br />
-            <u>Hang Gao</u>, Zheng Shou, Alireza Zareian, Hanwang Zhang, Shih-Fu Chang <br />
-            Neural Information Processing Systems (<b>NIPS</b>), 2018 <br />
-            [ arxiv ] [ pdf ] [ poster ] [ code ] (coming soon)
-            </p>
-            <p><b>AutoLoc: Weakly-supervised Temporal Action Localization in Untrimmed Videos</b> <br />
-            Zheng Shou, <u>Hang Gao</u>, Lei Zhang, Kazuyuki Miyazawa, Shih-Fu Chang <br />
-            European Conference on Computer Vision (<b>ECCV</b>), 2018 <br />
-            [ <a href="https://arxiv.org/abs/1807.08333">arxiv</a> ]
-            [ <a href="https://arxiv.org/pdf/1807.08333.pdf">pdf</a> ]
-            [ <a href="https://docs.google.com/presentation/d/1RewnUvHZx7e_mlq1q5naImpT6xxxz9Jc_R2LqbzMVgU/edit#slide=id.p">poster</a> ]
-            [ <a href="https://github.com/zhengshou/AutoLoc/">code</a> ]
-            </p>
-            <p>
-            <b>ER: Early Recognition of Inattentive Driving Events Leveraging Audio Devices on Smartphones</b> <br />
-            Xiangyu Xu, <u>Hang Gao</u>, Jiadi Yu, Yingying Chen, Yanmin Zhu, Guangtao Xue, Minglu Li <br />
-            International Conference on Computer Communications (<b>INFOCOM</b>), 2017 <br />
-            [ <a href="https://ieeexplore.ieee.org/document/8057022">IEEE</a> ]
-            [ <a href="http://www.winlab.rutgers.edu/~yychen/papers/ER%20Early%20Recognition%20of%20Inattentive%20Driving%20Leveraging%20Audio%20Devices%20on%20Smartphones.pdf">pdf</a> ]
-            </p>
-        </section>
-
-        <section id="footer">
-            <div class="container">
-                <ul class="copyright">
-                    <li>&copy; Hang Gao 2018</li>
-                    <li>Latest update: <small id="lu"></small></li>
-                    <li>Courtesy:
-                        <a href="http://linji.me/">J</a>
-                        <a href="http://hxu.rocks/">H</a>
-                        <a href="https://people.eecs.berkeley.edu/~pathak/">D</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <script>
-            var lu = document.lastModified;
-            document.getElementById("lu").innerHTML = lu.substr(0, 10);
+    <head>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128167050-1">
         </script>
-        <script src="javascripts/scalefix.js"></script>
-</body>
+        <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-128167050-1');
+        </script>
+        <script src="js/scramble.js"></script>
+        <script src="js/hidebib.js"></script>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Hang Gao</title>
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/pygment_trac.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/special.css">
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <br>
+                <div align="center">
+                    <span class="image avatar" >
+                        <img src="assets/avatar.jpg" ></img>
+                    </span>
+                </div>
+                <h1><b>Hang Gao</b></h1>
+
+                <p> 
+                <a href="https://github.com/cullengao">
+                    <font color="#222"><i class="fa fa-github fa-2x"></i></font>
+                </a> &nbsp &nbsp
+
+                <!--  <span class="cv_right">
+                    <a href="files/Ji_Lin_CV.pdf"><font size="4em" color="#222"><b>[CV]</b></font></a>
+                    </span> -->
+                </p>
+                <br>
+
+                <h4>Contact:</h4>
+                <p>
+                <font face="courier" id="email" style="display:inline;">
+                    lmng.gao@columabia.edu
+                    <a href="#" onclick="emailScramble.initAnimatedBubbleSort();return false;">
+                        unscramble
+                    </a>
+                </font>
+                <script>
+emailScramble = new scrambledString(document.getElementById('email'),
+    'emailScramble', 'luahoaa.goacinubg.@mde',
+    [12,13,15,1,8,7,2,5,4,11,18,10,17,3,22,16,6,19,9,14,21,20]);
+                </script>
+                </p>
+            </header>
+
+            <section class="outer">
+                <section  id="about">
+                    <h2>About</h2>
+                    <p>
+                    I am a master student in Computer Science at <a href="https://www.columbia.edu/">Columbia University</a>, currently collaborating with Prof. <a href="https://people.eecs.berkeley.edu/~trevor://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a> at <a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research (BAIR)</a> as a research intern. Earlier back in Columbia, I worked at <a href="http://www.ee.columbia.edu/ln/dvmm/">Digital Video Multimedia Lab (DVMM)</a>, advised by Prof. <a href="http://www.ee.columbia.edu/~sfchang/">Shih-Fu Chang</a>.
+                    </p>
+                    <!--<p>-->
+                    <!--I graduated from <a href="http://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a> with B.E. in Information Security. During my undergrad period, I worked with <a href="http://www.cs.cmu.edu/~anind/">Prof. Anind Dey</a> at <a href="http://ubicomplab.org/">Ubiquitous Computing Lab (UbicompLab)</a> and <a href="http://english.seiee.sjtu.edu.cn/english/detail/841_669.htm">Prof. Minglu Li</a> at <a href="http://wanglab.sjtu.edu.cn/en/Default.aspx">Wireless Networking and Artificial Intelligence Lab</a>.-->
+                    <!--</p>-->
+                    <p>
+                    I am most interested in deep generative models and their
+                    application - whether it be in their development, inference, or
+                    more generally their foundations for computational and statistical
+                    analysis.
+                    </p>
+                    <p>
+                    <i>I will apply for PhD programs in CV starting from 2019 Fall.</i>
+                    Wish me luck.
+                    </p>
+
+                </section>
+
+                <!-- Education -->
+                <section  id="education">
+                    <h2>Timeline</h2>
+
+                    <div class="media">
+                        <span class="pull-left"><img src="assets/berkeley.png" width="96px" height="96px"/></span>
+                        <div class="media-body">
+                            <p>
+                            <span style="font-weight: bold"> May 2018 - Present</span>
+                            </p>
+                            Department of Electrical Engineering and Computer Science,<br>
+                            <em>UC Berkeley</em>
+                            <p>Research Intern with Prof. Trevor Darrell</p>
+                        </div>  
+                    </div>
+                    <div class="media">
+                        <span class="pull-left"><img src="assets/columbia.png" width="96px" height="96px"/></span>
+                        <div class="media-body">
+                            <p><span style="font-weight: bold">Sep 2017 - Dec 2018
+                                (Expected)</span>
+                            </p>
+                            Fu Foundation School of Engineering, <br>
+                            <em>Columbia University</em>
+                            <p>Master of Science in Computer Science</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <span class="pull-left"><img src="assets/sjtu.png" width="96px" height="96px"/></span>
+                        <div class="media-body">
+                            <p><span style="font-weight: bold">Sep 2013 - Jul
+                                2017</span></p>
+                            Department of Computer Science and Engineering,<br>
+                            <i>Shanghai Jiao Tong University</i>
+                            <p>Bachelor of Engineering in Information Security</p>
+                        </div>  
+                    </div>
+                    <div class="media">
+                        <span class="pull-left"><img src="assets/cmu.png" width="96px" height="96px"/></span>
+                        <div class="media-body">
+                            <p><span style="font-weight: bold">Jul 2016 - Sep
+                                2016</span></p>
+                            Human-Computer Interaction Institute,<br>
+                            <i>Carnegie Mellon University</i>
+                            <p>Research Intern with Prof. Anind Dey</p>
+                        </div>  
+                    </div>
+                </section>
+                <section id='publications'>
+                    <h2>Publications</h2>
+
+                    <p><b>Low-shot Learning via Covariance-Preserving Adversarial Augmentation Networks</b> <br>
+                    <u>Hang Gao</u>, Zheng Shou, Alireza Zareian, Hanwang Zhang, Shih-Fu Chang <br>
+                    NIPS 2018 <br>
+                    <div class="paper" id="cpaan2018">
+                        [ arxiv ] 
+                        [ pdf ] 
+                        [ <a href="javascript:toggleblock('cpaan2018_abs')">abstract</a> ] 
+                        <!--[ <a href="javascript:togglebib('cpaan2018')">bib</a> ] -->
+                        [ bib ] 
+                        [ <a href="assets/cpaan_nips18_supp.pdf">supp</a> ] 
+                        <p align="justify">
+                        <i id="cpaan2018_abs" style="display: none;">
+                            <br>
+                            Deep neural networks suffer from over-fitting and catastrophic forgetting when trained with small data. One natural remedy for this problem is data augmentation, which has been recently shown to be effective. However, previous works either assume that intra-class variances can always be generalized to new classes, or employ naive generation methods to hallucinate finite examples without modeling their latent distributions. In this work, we propose Covariance-Preserving Adversarial Augmentation Networks to overcome existing limits of low-shot learning. Specifically, a novel Generative Adversarial Network is designed to model the latent distribution of each novel class given its related base counterparts. Since direct estimation on novel classes can be inductively biased, we explicitly preserve covariance information as the ``variability'' of base examples during the generation process. Empirical results show that our model can generate realistic yet diverse examples, leading to substantial improvements on the ImageNet benchmark over the state of the art.
+                        </i>
+                        </p>
+                        <!--<pre xml:space="preserve" style="display: none;">@inproceedings{pathak18largescale,-->
+              <!--Author = {Burda, Yuri and-->
+              <!--Edwards, Harri and Pathak, Deepak and-->
+              <!--Storkey, Amos and Darrell, Trevor and-->
+              <!--Efros, Alexei A.},-->
+              <!--Title = {Large-Scale Study of-->
+              <!--Curiosity-Driven Learning},-->
+              <!--Booktitle = {arXiv:1808.04355},-->
+              <!--Year = {2018}-->
+            <!--}-->
+            <!--</pre>-->
+                    </div>
+                    </p>
+                    <p><b>AutoLoc: Weakly-supervised Temporal Action Localization in Untrimmed Videos</b> <br>
+                    Zheng Shou, <u>Hang Gao</u>, Lei Zhang, Kazuyuki Miyazawa, Shih-Fu Chang <br>
+                    ECCV 2018 <br>
+                    <div class="paper" id="autoloc2018">
+                        [ <a href="https://arxiv.org/abs/1807.08333">arxiv</a> ]
+                        [ <a href="https://arxiv.org/pdf/1807.08333.pdf">pdf</a> ]
+                        [ <a href="javascript:toggleblock('autoloc2018_abs')">abstract</a> ] 
+                        [ <a href="javascript:togglebib('autoloc2018')">bib</a> ] 
+                        [ <a href="https://docs.google.com/presentation/d/1RewnUvHZx7e_mlq1q5naImpT6xxxz9Jc_R2LqbzMVgU/edit#slide=id.p">poster</a> ]
+                        [ <a href="https://github.com/zhengshou/AutoLoc/">code</a> ]
+                        <p align="justify">
+                        <i id="autoloc2018_abs" style="display: none;">
+                            <br>
+                            Temporal Action Localization (TAL) in untrimmed video is important for many applications. But it is very expensive to annotate the segment-level ground truth (action class and temporal boundary). This raises the interest of addressing TAL with weak supervision, namely only video-level annotations are available during training). However, the state-of-the-art weakly-supervised TAL methods only focus on generating good Class Activation Sequence (CAS) over time but conduct simple thresholding on CAS to localize actions. In this paper, we first develop a novel weakly-supervised TAL framework called AutoLoc to directly predict the temporal boundary of each action instance. We propose a novel Outer-Inner-Contrastive (OIC) loss to automatically discover the needed segment-level supervision for training such a boundary predictor. Our method achieves dramatically improved performance: under the IoU threshold 0.5, our method improves mAP on THUMOS'14 from 13.7% to 21.2% and mAP on ActivityNet from 7.4% to 27.3%. It is also very encouraging to see that our weakly-supervised method achieves comparable results with some fully-supervised methods.
+                        </i>
+                        </p>
+                        <pre xml:space="preserve" style="display: none;">
+@inproceedings{zheng_eccv18_autoloc,
+    title={AutoLoc: Weakly-supervised Temporal Action 
+    Localization in Untrimmed Videos},
+    author={Shou, Zheng and Gao, Hang and Zhang, Lei 
+    and Miyazawa, Kazuyuki and Chang, Shih-Fu},
+    booktitle = {ECCV},
+    year={2018}
+}
+                        </pre>
+                    </div>
+                    </p>
+                    <p>
+                    <b>ER: Early Recognition of Inattentive Driving Events Leveraging Audio Devices on Smartphones</b> <br>
+                    Xiangyu Xu, <u>Hang Gao</u>, Jiadi Yu, Yingying Chen, Yanmin Zhu, Guangtao Xue, Minglu Li <br>
+                    INFOCOM 2017 <br>
+                    <div class="paper" id="er2017">
+                        [ <a href="https://ieeexplore.ieee.org/document/8057022">IEEE</a> ]
+                        [ <a href="http://www.winlab.rutgers.edu/~yychen/papers/ER%20Early%20Recognition%20of%20Inattentive%20Driving%20Leveraging%20Audio%20Devices%20on%20Smartphones.pdf">pdf</a> ]
+                        [ <a href="javascript:toggleblock('er2017_abs')">abstract</a> ] 
+                        [ <a href="javascript:togglebib('er2017')">bib</a> ] 
+                        <p align="justify">
+                        <i id="er2017_abs" style="display: none;">
+                            <br>
+                            Real-time driving behavior monitoring is a corner stone to improve driving safety. Most of the existing studies on driving behavior monitoring using smartphones only provide detection results after an abnormal driving behavior is finished, not sufficient for driver alert and avoiding car accidents. In this paper, we leverage existing audio devices on smartphones to realize early recognition of inattentive driving events including Fetching Forward, Picking up Drops, Turning Back and Eating or Drinking. Through empirical studies of driving traces collected in real driving environments, we find that each type of inattentive driving event exhibits unique patterns on Doppler profiles of audio signals. This enables us to develop an Early Recognition system, ER, which can recognize inattentive driving events at an early stage and alert drivers timely. ER employs machine learning methods to first generate binary classifiers for every pair of inattentive driving events, and then develops a modified vote mechanism to form a multi-classifier for all inattentive driving events along with other driving behaviors. It next turns the multi-classifier into a gradient model forest to achieve early recognition of inattentive driving. Through extensive experiments with 8 volunteers driving for about half a year, ER can achieve an average total accuracy of 94.80% for inattentive driving recognition and recognize over 80% inattentive driving events before the event is 50% finished.
+                        </i>
+                        </p>
+                        <pre xml:space="preserve" style="display: none;">
+@inproceedings{xu2017er,
+    title={ER: Early recognition of inattentive driving 
+    leveraging audio devices on smartphones},
+    author={Xu, Xiangyu and Gao, Hang and Yu, Jiadi and 
+    Chen, Yingying and Zhu, Yanmin and Xue, Guangtao and Li, Minglu},
+    booktitle={INFOCOM 2017-IEEE Conference on Computer 
+    Communications, IEEE},
+    pages={1--9},
+    year={2017},
+    organization={IEEE}
+}
+                        </pre>
+                    </div>
+                    </p>
+                </section>
+
+                <section id="footer">
+                    <div class="container">
+                        <ul class="copyright">
+                            <li>&copy; Hang Gao 2018</li>
+                            <li>Latest update: <small id="lu"></small></li>
+                            <li>Courtesy:
+                                <a href="http://linji.me/">L</a>
+                                <a href="http://hxu.rocks/">X</a>
+                                <a href="https://people.eecs.berkeley.edu/~pathak/">P</a>
+                                <a href="http://people.csail.mit.edu/junyanz/">Z</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <script>
+var lu = document.lastModified;
+document.getElementById("lu").innerHTML = lu.substr(0, 10);
+                </script>
+                <script src="js/fixscale.js"></script>
+    </body>
 </html>
