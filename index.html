@@ -22,6 +22,7 @@ gtag('config', 'UA-128167050-1');
         <link rel="stylesheet" href="css/pygment_trac.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/academicons.min.css">
         <link rel="stylesheet" href="css/special.css">
         <meta name="viewport" content="width=device-width">
     </head>
@@ -39,9 +40,15 @@ gtag('config', 'UA-128167050-1');
 
                 <p> 
                 <a href="https://github.com/cullengao">
-                    <font color="#222"><i class="fa fa-github fa-2x"></i></font>
+                    <font color="#222">
+                        <i class="fa fa-github fa-2x" class="icon"></i>
+                    </font>
                 </a> &nbsp &nbsp
-
+                <a href="https://github.com/cullengao" class="icon">
+                    <font color="#222">
+                        <i class="ai ai-google-scholar ai-2x" class="icon"></i>
+                    </font>
+                </a> &nbsp &nbsp
                 <!--  <span class="cv_right">
                     <a href="files/Ji_Lin_CV.pdf"><font size="4em" color="#222"><b>[CV]</b></font></a>
                     </span> -->
@@ -240,9 +247,10 @@ emailScramble = new scrambledString(document.getElementById('email'),
                     </div>
                 </section>
                 <script>
-var lu = document.lastModified;
-document.getElementById("lu").innerHTML = lu.substr(0, 10);
+                var lu = document.lastModified;
+                document.getElementById("lu").innerHTML = lu.substr(0, 10);
                 </script>
                 <script src="js/fixscale.js"></script>
+        </div>
     </body>
 </html>
