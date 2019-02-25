@@ -3,14 +3,15 @@
 .cv_right {margin-left: 52px; position: absolute;}
 
 .image.avatar {
-    border-radius: 100%;
+    border-radius: 0%;
     overflow: hidden;
 }
 
 .image.avatar img {
-    border-radius: 100%;
+    border-radius: 0%;
     display: block;
-    width: 70%;
+    width: 80%;
+    border:2px solid black;
 }
 
 .icon i {
@@ -26,34 +27,35 @@
     }
 }
 
+
 h1 {
     font-family: "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #111
 }
 
 body {
-    background-color: #d4d4d4;
+    background-color: #e6e2dd;
     padding:50px;
     font-size: 14px/1.5;
     font-family: "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color:#4f4f4f;
+    color: #1b120f;
     font-weight:400;
 }
 
 a {
-    color:#008c9d;
+    color:#8f1d14;
     text-decoration:none;
 }
 
 a:hover {
-    color:#016570;
+    color: #f89d13;
 }
 
 /* Footer */
 
 #footer {
     border-top: 0;
-    color: #828080;
+    color: #b28d87;
     overflow: hidden;
     padding: 2em 0 1em 0;
 }
@@ -65,7 +67,7 @@ a:hover {
 }
 
 #footer .copyright li {
-    border-left: solid 1px #828080;
+    border-left: solid 1px #b28d87;
     display: inline-block;
     font-size: 0.8em;
     margin-left: 1em;
@@ -82,5 +84,5 @@ a:hover {
     color: inherit;
 }
 #footer .copyright li a:hover {
-    color: #016570
+    color: #f89d13
 }
