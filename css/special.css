@@ -54,10 +54,15 @@ a:hover {
 /* Footer */
 
 #footer {
-    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    width: 100%;
+    min-width: 50px;
     color: #b28d87;
     overflow: hidden;
     padding: 2em 0 1em 0;
+    text-align: center;
+    white-space: nowrap;
 }
 
 #footer .copyright {
@@ -67,9 +72,10 @@ a:hover {
 }
 
 #footer .copyright li {
+    width: auto;
     border-left: solid 1px #b28d87;
     display: inline-block;
-    font-size: 0.8em;
+    font-size: 0.75em;
     margin-left: 1em;
     padding-left: 1em;
 }

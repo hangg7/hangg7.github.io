@@ -5,11 +5,11 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128167050-1">
         </script>
         <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-gtag('config', 'UA-128167050-1');
+            gtag('config', 'UA-128167050-1');
         </script>
         <script src="js/scramble.js"></script>
         <script src="js/hidebib.js"></script>
@@ -51,7 +51,7 @@ gtag('config', 'UA-128167050-1');
                 </a> &nbsp &nbsp
                 <span class="cv_right">
                     <a href="https://drive.google.com/open?id=1VF43kYlCXT1y146gs8JNQcL6TWx2gnUf"><font size="4em" color="#222"><b>[CV]</b></font></a>
-	        </span>
+                </span>
                 </p>
                 <br>
 
@@ -64,9 +64,9 @@ gtag('config', 'UA-128167050-1');
                     </a>
                 </font>
                 <script>
-emailScramble = new scrambledString(document.getElementById('email'),
-    'emailScramble', 'luahoaa.goacinubg.@mde',
-    [12,13,15,1,8,7,2,5,4,11,18,10,17,3,22,16,6,19,9,14,21,20]);
+                    emailScramble = new scrambledString(document.getElementById('email'),
+                        'emailScramble', 'luahoaa.goacinubg.@mde',
+                        [12,13,15,1,8,7,2,5,4,11,18,10,17,3,22,16,6,19,9,14,21,20]);
                 </script>
                 </p>
             </header>
@@ -85,63 +85,15 @@ emailScramble = new scrambledString(document.getElementById('email'),
                     <a href="http://http://www.cs.cmu.edu/~anind/" style="white-space: nowrap">
                         Anind Dey</a>.
                     </p>
-                    My research focuses on augmenting existing intelligent systems with
-                    the <i>common sense</i> - the sense of world composition
-                    that goes beyond of visual semantics, to relations,
-                    geometries and physics.
                     <p>
-
+                    My research studies pixels in non-isolated contexts for
+                    efficient and robust visual representations. More
+                    specifically, I am interested in designing intelligent
+                    agents that persistently capture correspondence over
+                    semantic relations, temporal dynamics and spatial
+                    geometries.
                     </p>
-
                 </section>
-
-                <!-- Education -->
-                <!-- <section  id="education"> -->
-                    <!-- <h2>Timeline</h2> -->
-
-                    <!-- <div class="media"> -->
-                        <!-- <span class="pull-left"><img src="assets/berkeley.png" width="96px" height="96px"/></span> -->
-                        <!-- <div class="media-body"> -->
-                            <!-- <p> -->
-                            <!-- <span style="font-weight: bold"> May 2018 - Present</span> -->
-                            <!-- </p> -->
-                            <!-- Department of Electrical Engineering and Computer Science,<br> -->
-                            <!-- <em>UC Berkeley</em> -->
-                            <!-- <p>Research Intern with Prof. Trevor Darrell</p> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="media"> -->
-                        <!-- <span class="pull-left"><img src="assets/columbia.png" width="96px" height="96px"/></span> -->
-                        <!-- <div class="media-body"> -->
-                            <!-- <p><span style="font-weight: bold">Sep 2017 - Dec 2018 -->
-                                <!-- (Expected)</span> -->
-                            <!-- </p> -->
-                            <!-- Fu Foundation School of Engineering, <br> -->
-                            <!-- <em>Columbia University</em> -->
-                            <!-- <p>Master of Science in Computer Science</p> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="media"> -->
-                        <!-- <span class="pull-left"><img src="assets/sjtu.png" width="96px" height="96px"/></span> -->
-                        <!-- <div class="media-body"> -->
-                            <!-- <p><span style="font-weight: bold">Sep 2013 - Jul -->
-                                <!-- 2017</span></p> -->
-                            <!-- Department of Computer Science and Engineering,<br> -->
-                            <!-- <i>Shanghai Jiao Tong University</i> -->
-                            <!-- <p>Bachelor of Engineering in Information Security</p> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="media"> -->
-                        <!-- <span class="pull-left"><img src="assets/cmu.png" width="96px" height="96px"/></span> -->
-                        <!-- <div class="media-body"> -->
-                            <!-- <p><span style="font-weight: bold">Jul 2016 - Sep -->
-                                <!-- 2016</span></p> -->
-                            <!-- Human-Computer Interaction Institute,<br> -->
-                            <!-- <i>Carnegie Mellon University</i> -->
-                            <!-- <p>Research Intern with Prof. Anind Dey</p> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </section> -->
                 <section id='publications'>
                     <h2>Publications</h2>
 
@@ -155,7 +107,7 @@ emailScramble = new scrambledString(document.getElementById('email'),
                         <p align="justify">
                         <i id="gao2018disentangling_abs" style="display: none;">
                             <br>
-Learning to predict future video frames is a challenging task. Recent approaches for natural scenes directly predict pixels via inferring appearance flow and using flow-guided warping. Such models excel when motion estimates are accurate, but the motion may be ambiguous or erroneous in many real scenes. When scene motion exposes new regions of the scene, motion-based prediction yields poor results. However, learning to predict novel pixels directly can also require a prohibitive amount of training. In this work, we present a confidence-aware spatial-temporal context encoder for video prediction called Flow-Grounded Video Prediction (FGVP), in which motion propagation and novel pixel generation are first disentangled and then fused according to computed flow uncertainty map. For regions where motion-based prediction shows low-confidence, our model uses a conditional context encoder to hallucinate appropriate content. We test our methods on the standard CalTech Pedestrian dataset and the more challenging KITTI Flow dataset of larger motions and occlusions. Our methods produce both sharp and natural predictions compared to previous works, achieving the state-of-the-art performance on both datasets.
+                            Learning to predict future video frames is a challenging task. Recent approaches for natural scenes directly predict pixels via inferring appearance flow and using flow-guided warping. Such models excel when motion estimates are accurate, but the motion may be ambiguous or erroneous in many real scenes. When scene motion exposes new regions of the scene, motion-based prediction yields poor results. However, learning to predict novel pixels directly can also require a prohibitive amount of training. In this work, we present a confidence-aware spatial-temporal context encoder for video prediction called Flow-Grounded Video Prediction (FGVP), in which motion propagation and novel pixel generation are first disentangled and then fused according to computed flow uncertainty map. For regions where motion-based prediction shows low-confidence, our model uses a conditional context encoder to hallucinate appropriate content. We test our methods on the standard CalTech Pedestrian dataset and the more challenging KITTI Flow dataset of larger motions and occlusions. Our methods produce both sharp and natural predictions compared to previous works, achieving the state-of-the-art performance on both datasets.
                         </i>
                         </p>
                         <pre xml:space="preserve" style="display: none;">
@@ -246,28 +198,25 @@ Learning to predict future video frames is a challenging task. Recent approaches
                         </pre>
                     </div>
                 </section>
-
-                <section id="footer">
-                    <div class="container" style="font-size: small">
-                        <ul class="copyright">
-                            <li>&copy; Hang Gao <small id="yr"></small></li>
-                            <li>Latest update: <small id="lu"></small></li>
-                            <li>Courtesy:
-                                <a href="http://linji.me/">L</a>
-                                <a href="http://hxu.rocks/">X</a>
-                                <a href="https://people.eecs.berkeley.edu/~pathak/">P</a>
-                                <a href="http://people.csail.mit.edu/junyanz/">Z</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <script>
-                var yr = document.lastModified;
-                var lu = document.lastModified;
-                document.getElementById("yr").innerHTML = yr.substr(6, 4);
-                document.getElementById("lu").innerHTML = lu.substr(0, 3) + lu.substr(6, 4);
-                </script>
-                <script src="js/fixscale.js"></script>
+            </section>
         </div>
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Hang Gao <text id="yr"></text></li>
+                    <li>Courtesy:
+                        <a href="http://linji.me/">L</a>
+                        <a href="http://hxu.rocks/">X</a>
+                        <a href="https://people.eecs.berkeley.edu/~pathak/">P</a>
+                        <a href="http://people.csail.mit.edu/junyanz/">Z</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </body>
+    <script>
+        var yr = document.lastModified;
+        document.getElementById("yr").innerHTML = yr.substr(6, 4);
+    </script>
+    <script src="js/fixscale.js"></script>
 </html>
