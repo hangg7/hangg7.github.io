@@ -7,11 +7,16 @@
     overflow: hidden;
 }
 
+.abstract {
+    font-family: "Times";
+}
+
 .image.avatar img {
     border-radius: 0%;
     display: block;
     width: 80%;
-    border:2px solid black;
+    max-width: 200px;
+    border:2px solid #222;
 }
 
 .icon i {
@@ -26,24 +31,27 @@
         list-style: none;
     }
 }
+.publications.title {
+    color: #222;
+}
 
 
 h1 {
     font-family: "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #111
+    color: #222
 }
 
 body {
-    background-color: #e6e2dd;
+    background-color: #f9f7f7;
     padding:50px;
     font-size: 14px/1.5;
     font-family: "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #1b120f;
+    color: #222;
     font-weight:400;
 }
 
 a {
-    color:#8f1d14;
+    color: #3f72af;
     text-decoration:none;
 }
 
@@ -58,7 +66,7 @@ a:hover {
     border-bottom: 0;
     width: 100%;
     min-width: 50px;
-    color: #b28d87;
+    color: #dbe2ef;
     overflow: hidden;
     padding: 2em 0 1em 0;
     text-align: center;
@@ -73,7 +81,7 @@ a:hover {
 
 #footer .copyright li {
     width: auto;
-    border-left: solid 1px #b28d87;
+    border-left: solid 1px #dbe2ef;
     display: inline-block;
     font-size: 0.75em;
     margin-left: 1em;

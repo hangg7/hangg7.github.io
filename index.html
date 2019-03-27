@@ -31,7 +31,7 @@
         <div class="wrapper">
             <header>
                 <br>
-                <div align="center">
+                <div align="left">
                     <span class="image avatar" >
                         <img src="assets/avatar.jpg" ></img>
                     </span>
@@ -97,18 +97,117 @@
                 <section id='publications'>
                     <h2>Publications</h2>
 
-                    <b><a href="https://arxiv.org/pdf/1812.00452.pdf">Disentangling Propagation and Generation for Video Prediction</a></b><br>
-                    <u>Hang Gao</u><sup>*</sup>, Huazhe Xu<sup>*</sup>, Qi-Zhi Cai, Ruth Wang, Fisher Yu, Trevor Darrell <br>
+                    <b>
+                        <a href="http://www.columbia.edu/~hg2469/#TODO" class="publications title">
+                            Spatio-Temporal Action Graph Networks
+                        </a>
+                    </b>
+                    <br>
+                    Roei Herzig<sup>*</sup>,
+                    Huijuan Xu<sup>*</sup>,
+                    <u>Hang Gao</u><sup>*</sup>,
+                    Elad Levi,
+                    Eli Brosh,
+                    Xiaolong Wang,
+                    Amir Globerson,
+                    Trevor Darrell
+                    <br>
+                    <div class="paper" id="herzig2019spatio">
+                        Preprint
+                        / <a href="http://www.columbia.edu/~hg2469/#TODO">arxiv</a>
+                        / <a href="javascript:toggleblock('herzig2019spatio_abs')">abstract</a>
+                        <!-- / <a href="javascript:togglebib('herzig2019spatio')">bib</a> -->
+                        <p align="justify">
+                        <dir id="herzig2019spatio_abs" class="abstract" style="display: none;">
+                            Events defined by the interaction of objects in a
+                            scene are often of critical importance; yet
+                            important events may have insufficient labeled
+                            examples to train a conventional deep model to
+                            generalize to future object appearance. Activity
+                            recognition models that represent object
+                            interactions explicitly have the potential to learn
+                            in a more efficient manner than those that
+                            represent scenes with global descriptors. We
+                            propose a novel inter-object graph representation
+                            for activity recognition based on a disentangled
+                            graph embedding with direct observation of edge
+                            appearance. In contrast to prior efforts, our
+                            approach includes explicit appearance models for
+                            edge-terms in the graph, formed over regions that
+                            are the union of the spatial extent of the
+                            constituent objects. We also employ a novel
+                            factored embedding of the graph structure,
+                            disentangling a representation hierarchy formed
+                            over spatial dimensions from that found over
+                            temporal variation. We demonstrate the
+                            effectiveness of our model on the Charades activity
+                            recognition benchmark, as well as a new dataset of
+                            driving activities focusing on multi-object
+                            interactions with near-collision events. Our model
+                            offers significantly improved performance compared
+                            to baseline approaches without object-graph
+                            representations, or with previous graph-based
+                            models.
+                        </dir>
+                        </p>
+                        <!-- <pre xml:space="preserve" style="display: none;"> -->
+<!-- @inproceedings{gao2018disentangling, -->
+    <!-- title={Disentangling Propagation and Generation for Video Prediction}, -->
+    <!-- author={Gao, Hang and Xu, Huazhe and Cai, Qi-Zhi -->
+    <!-- and Wang, Ruth and Yu, Fisher and Darrell, Trevor}, -->
+    <!-- booktitle={arXiv preprint arXiv:1812.00452.}, -->
+    <!-- year={2018}, -->
+<!-- } -->
+                        <!-- </pre> -->
+                    </div>
+
+                    <b>
+                        <a href="https://arxiv.org/pdf/1812.00452.pdf" class="publications title">
+                            Disentangling Propagation and Generation for Video Prediction
+                        </a>
+                    </b>
+                    <br>
+                    <u>Hang Gao</u><sup>*</sup>,
+                    Huazhe Xu<sup>*</sup>,
+                    Qi-Zhi Cai,
+                    Ruth Wang,
+                    Fisher Yu,
+                    Trevor Darrell
+                    <br>
                     <div class="paper" id="gao2018disentangling">
                         Preprint
                         / <a href="https://arxiv.org/abs/1812.00452">arxiv</a>
                         / <a href="javascript:toggleblock('gao2018disentangling_abs')">abstract</a>
                         / <a href="javascript:togglebib('gao2018disentangling')">bib</a>
                         <p align="justify">
-                        <i id="gao2018disentangling_abs" style="display: none;">
-                            <br>
-                            Learning to predict future video frames is a challenging task. Recent approaches for natural scenes directly predict pixels via inferring appearance flow and using flow-guided warping. Such models excel when motion estimates are accurate, but the motion may be ambiguous or erroneous in many real scenes. When scene motion exposes new regions of the scene, motion-based prediction yields poor results. However, learning to predict novel pixels directly can also require a prohibitive amount of training. In this work, we present a confidence-aware spatial-temporal context encoder for video prediction called Flow-Grounded Video Prediction (FGVP), in which motion propagation and novel pixel generation are first disentangled and then fused according to computed flow uncertainty map. For regions where motion-based prediction shows low-confidence, our model uses a conditional context encoder to hallucinate appropriate content. We test our methods on the standard CalTech Pedestrian dataset and the more challenging KITTI Flow dataset of larger motions and occlusions. Our methods produce both sharp and natural predictions compared to previous works, achieving the state-of-the-art performance on both datasets.
-                        </i>
+                        <dir id="gao2018disentangling_abs" class="abstract" style="display: none;">
+                            Learning to predict future video frames is a
+                            challenging task. Recent approaches for natural
+                            scenes directly predict pixels via inferring
+                            appearance flow and using flow-guided warping. Such
+                            models excel when motion estimates are accurate,
+                            but the motion may be ambiguous or erroneous in
+                            many real scenes. When scene motion exposes new
+                            regions of the scene, motion-based prediction
+                            yields poor results. However, learning to predict
+                            novel pixels directly can also require a
+                            prohibitive amount of training. In this work, we
+                            present a confidence-aware spatial-temporal context
+                            encoder for video prediction called Flow-Grounded
+                            Video Prediction (FGVP), in which motion
+                            propagation and novel pixel generation are first
+                            disentangled and then fused according to computed
+                            flow uncertainty map. For regions where
+                            motion-based prediction shows low-confidence, our
+                            model uses a conditional context encoder to
+                            hallucinate appropriate content. We test our
+                            methods on the standard CalTech Pedestrian dataset
+                            and the more challenging KITTI Flow dataset of
+                            larger motions and occlusions. Our methods produce
+                            both sharp and natural predictions compared to
+                            previous works, achieving the state-of-the-art
+                            performance on both datasets.
+                        </dir>
                         </p>
                         <pre xml:space="preserve" style="display: none;">
 @inproceedings{gao2018disentangling,
@@ -121,19 +220,44 @@
                         </pre>
                     </div>
 
-                    <b><a href="https://arxiv.org/pdf/1810.11730.pdf">Low-shot Learning via Covariance-Preserving Adversarial Augmentation Networks</a></b><br>
+                    <b>
+                        <a href="https://arxiv.org/pdf/1810.11730.pdf" class="publications title">
+                            Low-shot Learning via Covariance-Preserving Adversarial Augmentation Networks
+                        </a>
+                    </b>
+                    <br>
                     <u>Hang Gao</u>, Zheng Shou, Alireza Zareian, Hanwang Zhang, Shih-Fu Chang <br>
                     <div class="paper" id="gao2018low">
                         NeurIPS 2018
                         / <a href="https://arxiv.org/abs/1810.11730">arxiv</a>
                         / <a href="javascript:toggleblock('gao2018low_abs')">abstract</a>
                         / <a href="javascript:togglebib('gao2018low')">bib</a>
-                        / <a href="assets/cpaan_nips18_supp.pdf">supp</a>
                         <p align="justify">
-                        <i id="gao2018low_abs" style="display: none;">
-                            <br>
-                            Deep neural networks suffer from over-fitting and catastrophic forgetting when trained with small data. One natural remedy for this problem is data augmentation, which has been recently shown to be effective. However, previous works either assume that intra-class variances can always be generalized to new classes, or employ naive generation methods to hallucinate finite examples without modeling their latent distributions. In this work, we propose Covariance-Preserving Adversarial Augmentation Networks to overcome existing limits of low-shot learning. Specifically, a novel Generative Adversarial Network is designed to model the latent distribution of each novel class given its related base counterparts. Since direct estimation on novel classes can be inductively biased, we explicitly preserve covariance information as the ``variability'' of base examples during the generation process. Empirical results show that our model can generate realistic yet diverse examples, leading to substantial improvements on the ImageNet benchmark over the state of the art.
-                        </i>
+                        <dir id="gao2018low_abs" class="abstract" style="display: none;">
+                            Deep neural networks suffer from over-fitting and
+                            catastrophic forgetting when trained with small
+                            data. One natural remedy for this problem is data
+                            augmentation, which has been recently shown to be
+                            effective. However, previous works either assume
+                            that intra-class variances can always be
+                            generalized to new classes, or employ naive
+                            generation methods to hallucinate finite examples
+                            without modeling their latent distributions. In
+                            this work, we propose Covariance-Preserving
+                            Adversarial Augmentation Networks to overcome
+                            existing limits of low-shot learning. Specifically,
+                            a novel Generative Adversarial Network is designed
+                            to model the latent distribution of each novel
+                            class given its related base counterparts. Since
+                            direct estimation on novel classes can be
+                            inductively biased, we explicitly preserve
+                            covariance information as the ``variability'' of
+                            base examples during the generation process.
+                            Empirical results show that our model can generate
+                            realistic yet diverse examples, leading to
+                            substantial improvements on the ImageNet benchmark
+                            over the state of the art.
+                        </dir>
                         </p>
                         <pre xml:space="preserve" style="display: none;">
 @inproceedings{gao2018low,
@@ -145,8 +269,18 @@
 }
                         </pre>
                     </div>
-                    <b><a href="https://arxiv.org/pdf/1807.08333.pdf">AutoLoc: Weakly-supervised Temporal Action Localization in Untrimmed Videos</a></b><br>
-                    Zheng Shou, <u>Hang Gao</u>, Lei Zhang, Kazuyuki Miyazawa, Shih-Fu Chang <br>
+                    <b>
+                        <a href="https://arxiv.org/pdf/1807.08333.pdf" class="publications title">
+                            AutoLoc: Weakly-supervised Temporal Action Localization in Untrimmed Videos
+                        </a>
+                    </b>
+                    <br>
+                    Zheng Shou,
+                    <u>Hang Gao</u>,
+                    Lei Zhang,
+                    Kazuyuki Miyazawa,
+                    Shih-Fu Chang
+                    <br>
                     <div class="paper" id="shou2018autoloc">
                         ECCV 2018
                         / <a href="https://arxiv.org/abs/1807.08333">arxiv</a>
@@ -154,10 +288,32 @@
                         / <a href="javascript:togglebib('shou2018autoloc')">bib</a>
                         / <a href="https://github.com/zhengshou/AutoLoc/">code</a>
                         <p align="justify">
-                        <i id="shou2018autoloc_abs" style="display: none;">
-                            <br>
-                            Temporal Action Localization (TAL) in untrimmed video is important for many applications. But it is very expensive to annotate the segment-level ground truth (action class and temporal boundary). This raises the interest of addressing TAL with weak supervision, namely only video-level annotations are available during training). However, the state-of-the-art weakly-supervised TAL methods only focus on generating good Class Activation Sequence (CAS) over time but conduct simple thresholding on CAS to localize actions. In this paper, we first develop a novel weakly-supervised TAL framework called AutoLoc to directly predict the temporal boundary of each action instance. We propose a novel Outer-Inner-Contrastive (OIC) loss to automatically discover the needed segment-level supervision for training such a boundary predictor. Our method achieves dramatically improved performance: under the IoU threshold 0.5, our method improves mAP on THUMOS'14 from 13.7% to 21.2% and mAP on ActivityNet from 7.4% to 27.3%. It is also very encouraging to see that our weakly-supervised method achieves comparable results with some fully-supervised methods.
-                        </i>
+                        <dir id="shou2018autoloc_abs" class="abstract" style="display: none;">
+                            Temporal Action Localization (TAL) in untrimmed
+                            video is important for many applications. But it is
+                            very expensive to annotate the segment-level ground
+                            truth (action class and temporal boundary). This
+                            raises the interest of addressing TAL with weak
+                            supervision, namely only video-level annotations
+                            are available during training). However, the
+                            state-of-the-art weakly-supervised TAL methods only
+                            focus on generating good Class Activation Sequence
+                            (CAS) over time but conduct simple thresholding on
+                            CAS to localize actions. In this paper, we first
+                            develop a novel weakly-supervised TAL framework
+                            called AutoLoc to directly predict the temporal
+                            boundary of each action instance. We propose a
+                            novel Outer-Inner-Contrastive (OIC) loss to
+                            automatically discover the needed segment-level
+                            supervision for training such a boundary predictor.
+                            Our method achieves dramatically improved
+                            performance: under the IoU threshold 0.5, our
+                            method improves mAP on THUMOS'14 from 13.7% to
+                            21.2% and mAP on ActivityNet from 7.4% to 27.3%. It
+                            is also very encouraging to see that our
+                            weakly-supervised method achieves comparable
+                            results with some fully-supervised methods.
+                        </dir>
                         </p>
                         <pre xml:space="preserve" style="display: none;">
 @inproceedings{shou2018autoloc,
@@ -170,18 +326,59 @@
 }
                         </pre>
                     </div>
-                    <b><a href="http://www.winlab.rutgers.edu/~yychen/papers/ER%20Early%20Recognition%20of%20Inattentive%20Driving%20Leveraging%20Audio%20Devices%20on%20Smartphones.pdf">ER: Early Recognition of Inattentive Driving Events Leveraging Audio Devices on Smartphones</a></b> <br>
-                    Xiangyu Xu, <u>Hang Gao</u>, Jiadi Yu, Yingying Chen, Yanmin Zhu, Guangtao Xue, Minglu Li <br>
+                    <b>
+                        <a href="http://www.winlab.rutgers.edu/~yychen/papers/ER%20Early%20Recognition%20of%20Inattentive%20Driving%20Leveraging%20Audio%20Devices%20on%20Smartphones.pdf" class="publications title">
+                            ER: Early Recognition of Inattentive Driving Events Leveraging Audio Devices on Smartphones
+                        </a>
+                    </b>
+                    <br>
+                    Xiangyu Xu,
+                    <u>Hang Gao</u>,
+                    Jiadi Yu,
+                    Yingying Chen,
+                    Yanmin Zhu,
+                    Guangtao Xue,
+                    Minglu Li
+                    <br>
                     <div class="paper" id="xu2017er">
                         INFOCOM 2017
                         / <a href="https://ieeexplore.ieee.org/document/8057022">IEEE</a>
                         / <a href="javascript:toggleblock('xu2017er_abs')">abstract</a>
                         / <a href="javascript:togglebib('xu2017er')">bib</a>
                         <p align="justify">
-                        <i id="xu2017er_abs" style="display: none;">
-                            <br>
-                            Real-time driving behavior monitoring is a corner stone to improve driving safety. Most of the existing studies on driving behavior monitoring using smartphones only provide detection results after an abnormal driving behavior is finished, not sufficient for driver alert and avoiding car accidents. In this paper, we leverage existing audio devices on smartphones to realize early recognition of inattentive driving events including Fetching Forward, Picking up Drops, Turning Back and Eating or Drinking. Through empirical studies of driving traces collected in real driving environments, we find that each type of inattentive driving event exhibits unique patterns on Doppler profiles of audio signals. This enables us to develop an Early Recognition system, ER, which can recognize inattentive driving events at an early stage and alert drivers timely. ER employs machine learning methods to first generate binary classifiers for every pair of inattentive driving events, and then develops a modified vote mechanism to form a multi-classifier for all inattentive driving events along with other driving behaviors. It next turns the multi-classifier into a gradient model forest to achieve early recognition of inattentive driving. Through extensive experiments with 8 volunteers driving for about half a year, ER can achieve an average total accuracy of 94.80% for inattentive driving recognition and recognize over 80% inattentive driving events before the event is 50% finished.
-                        </i>
+                        <dir id="xu2017er_abs" class="abstract" style="display: none;">
+                            Real-time driving behavior monitoring is a corner
+                            stone to improve driving safety. Most of the
+                            existing studies on driving behavior monitoring
+                            using smartphones only provide detection results
+                            after an abnormal driving behavior is finished, not
+                            sufficient for driver alert and avoiding car
+                            accidents. In this paper, we leverage existing
+                            audio devices on smartphones to realize early
+                            recognition of inattentive driving events including
+                            Fetching Forward, Picking up Drops, Turning Back
+                            and Eating or Drinking. Through empirical studies
+                            of driving traces collected in real driving
+                            environments, we find that each type of inattentive
+                            driving event exhibits unique patterns on Doppler
+                            profiles of audio signals. This enables us to
+                            develop an Early Recognition system, ER, which can
+                            recognize inattentive driving events at an early
+                            stage and alert drivers timely. ER employs machine
+                            learning methods to first generate binary
+                            classifiers for every pair of inattentive driving
+                            events, and then develops a modified vote mechanism
+                            to form a multi-classifier for all inattentive
+                            driving events along with other driving behaviors.
+                            It next turns the multi-classifier into a gradient
+                            model forest to achieve early recognition of
+                            inattentive driving. Through extensive experiments
+                            with 8 volunteers driving for about half a year, ER
+                            can achieve an average total accuracy of 94.80% for
+                            inattentive driving recognition and recognize over
+                            80% inattentive driving events before the event is
+                            50% finished.
+                        </dir>
                         </p>
                         <pre xml:space="preserve" style="display: none;">
 @inproceedings{xu2017er,
