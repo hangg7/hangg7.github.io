@@ -1,1 +1,456 @@
-Under construction.
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+    body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight:300;
+        font-size:18px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+    }
+
+    h1 {
+        font-weight:300;
+    }
+
+    .disclaimerbox {
+        background-color: #eee;
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+        padding: 20px;
+    }
+
+    video.header-vid {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    img.header-img {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    img.rounded {
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    a:link,a:visited
+    {
+        color: #1367a7;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #208799;
+    }
+
+    td.dl-link {
+        height: 160px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow:
+                0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                5px 5px 0 0px #fff, /* The second layer */
+                5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                10px 10px 0 0px #fff, /* The third layer */
+                10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+                15px 15px 0 0px #fff, /* The fourth layer */
+                15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+                20px 20px 0 0px #fff, /* The fifth layer */
+                20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+                25px 25px 0 0px #fff, /* The fifth layer */
+                25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+        margin-left: 10px;
+        margin-right: 45px;
+    }
+
+
+    .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow:
+                0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                5px 5px 0 0px #fff, /* The second layer */
+                5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                10px 10px 0 0px #fff, /* The third layer */
+                10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 30px;
+        margin-bottom: 5px;
+    }
+
+    .vert-cent {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    hr
+    {
+        border: 0;
+        height: 1.5px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+</style>
+
+<html>
+  <head>
+        <title>Deformable Kernels</title>
+        <meta property="og:title" content="deformable-kernels" />
+  </head>
+
+  <body>
+    <br>
+    <center>
+        <span style="font-size:40px">
+            Deformable Kernels:
+            <br>
+            Adapting Effective Receptive Fields for
+            <br>
+            Object Deformation
+        </span>
+    </center>
+    <br>
+    <table align=center width=800px>
+        <tr>
+            <td align=center width=100px>
+                <center>
+                    <span style="font-size:25px">
+                        <a href="https://people.eecs.berkeley.edu/~hangg/">Hang Gao</a><sup>1,3,*</sup>
+                    </span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                    <span style="font-size:25px">
+                        <a href="https://scholar.google.com/citations?hl=en&user=02RXI00AAAAJ">Xizhou Zhu</a><sup>2,3,*</sup>
+                    </span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                    <span style="font-size:25px">
+                        <a href="https://scholar.google.com/citations?user=c3PYmxUAAAAJ&hl=en&oi=ao">Steve Lin</a><sup>3</sup>
+                    </span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                    <span style="font-size:25px">
+                        <a href="https://jifengdai.org/">Jifeng Dai</a><sup>3</sup>
+                    </span>
+                </center>
+            </td>
+        </tr>
+    </table>
+    <table align=center width=850px>
+        <tr>
+            <td align=center width=200px>
+                <center>
+                    <span style="font-size:23px">
+                        <sup>1</sup>UC Berkeley
+                    </span>
+                </center>
+            </td>
+            <td align=center width=200px>
+                <center>
+                    <span style="font-size:23px">
+                        <sup>2</sup>University of Science and Technology of China
+                    </span>
+                </center>
+            </td>
+            <td align=center width=200px>
+                <center>
+                    <span style="font-size:23px">
+                        <sup>3</sup>Microsoft Research Asia
+                    </span>
+                </center>
+            </td>
+        </tr>
+    </table>
+    <table align=center width=300px>
+        <tr>
+            <td align=center width=100px>
+                <center>
+                    <span style="font-size:25px">
+                        <a href="https://arxiv.org/abs/1910.02940">[arXiv]</a>
+                    </span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                    <span style="font-size:25px">
+                        <a href="https://arxiv.org/abs/1910.02940">[GitHub]</a>
+                    </span>
+                </center>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table align=center width=600px>
+        <tr>
+            <td width=700px>
+                <center>
+                    <img src="materials/teaser.png" width="830px"></img><br>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td width=600px>
+                <center>
+                    <span style="font-size:14px">
+                        <i>
+                            How does convolutions handle object deformation?
+                            Here we show conceptually how different 3-by-3
+                            conv kernels interact with deformations of two
+                            images.
+                            <b>(a, b)</b>
+                            Conventional rigid kernels cannot adapt to object
+                            deformation.
+                            <b>(c)</b>
+                            Previous work reconfigures data towards common
+                            arrangement to counter the effects of geometric
+                            deformation.
+                            <b>(d)</b>
+                            We propose to resample kernels and, in effect,
+                            adapt kernel spaces while leaving the data
+                            untouched.
+                        </i>
+                    </span>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    Convolutional networks are not aware of an object’s geometric variations,
+    which leads to inefficient utilization of model and data capacity. To
+    overcome this issue, recent works on deformation modeling seek to spatially
+    reconfigure the data towards a common arrangement such that semantic
+    recognition suffers less from deformation. This is typically done by
+    augmenting static operators with learned free-form sampling grids in the
+    image space, dynamically tuned to the data and task for adapting the
+    receptive field. Yet adapting the receptive field does not quite reach the
+    actual goal – what really matters to the network is the <i>*effective*</i>
+    receptive field (ERF), which reflects how much each pixel contributes. It
+    is thus natural to design other approaches to adapt the ERF directly during
+    runtime.
+    <br>
+    <br>
+    In this work, we instantiate one possible solution as Deformable Kernels
+    (DKs), a family of novel and generic convolutional operators for handling
+    object deformations by directly adapting the ERF while leaving the
+    receptive field untouched. At the heart of our method is the ability to
+    resample the original kernel space towards recovering the deformation of
+    objects. This approach is justified with theoretical insights that the ERF
+    is strictly determined by data sampling locations and kernel values. We
+    implement DKs as generic drop-in replacements of rigid kernels and conduct
+    a series of empirical studies whose results conform with our theories.
+    Over several tasks and standard base models, our approach compares
+    favorably against prior works that adapt during runtime. In addition,
+    further experiments suggest a working mechanism orthogonal and
+    complementary to previous works.
+    <br>
+    <br>
+    <hr>
+
+    <center><h1>Results</h1></center>
+    <table align=center width=900px>
+        <tr>
+            <td width=1200px>
+                <center>
+                    <img src = "materials/sem-vs-scale.png" height="255px"></img><br>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td width=600px>
+                <center>
+                    <span style="font-size:14px">
+                        <i>
+                            What do DKs learn?
+                            We here show t-SNE results on learned control units
+                            of different operators.
+                            Qualitative, we observe that Conditional
+                            Convolutions try to gate more from semantics, while
+                            in our case, the learned kernel offsets are more
+                            scale-related.
+                        </i>
+                    </span>
+                    <br>
+                    <br>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td width=1200px>
+                <center>
+                    <img src = "materials/erf_visualization.png" width="970"></img><br>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td width=600px>
+                <center>
+                    <span style="font-size:14px">
+                        <i>
+                            We show learned ERFs on three images with large,
+                            medium, and small objects from the COCO
+                            <tt>test-dev</tt> split. Given each ground-truth
+                            bounding box, we visualize the non-zero ERF values
+                            of its central point. Theoretical RFs cover the
+                            whole image for all three examples and we thus
+                            ignore them in our plots. (a) Rigid kernels have
+                            strong central effects and a Gaussian-like ERF that
+                            cannot deal with object deformation alone. (b)
+                            Deformable Convolutions and (c) Deformable Kernels
+                            both tune ERFs to data. (d) Combining both
+                            operators together enables better modeling of 2D
+                            geometric transformation of objects.
+                        </i>
+                    </span>
+                </center>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table align=center width=650>
+        <center><h1>Paper</h1></center>
+        <tr>
+            <td>
+                <a href="https://arxiv.org/pdf/1910.02940.pdf">
+                    <img class="layered-paper-big" style="height:180px" src="materials/thumbnail.png"/>
+                </a>
+            </td>
+            <td>
+                <span style="font-size:14pt">
+                    Gao, Zhu, Lin, Dai.
+                    <br>
+                    Deformable Kernels:
+                    Adapting Effective Receptive Fields for
+                    Object Deformation.
+                    <br>
+                    In ICLR, 2020.
+                    <br>
+                </span>
+            </td>
+        </tr>
+    </table>
+    <table align=center width=180px>
+        <tr>
+            <td>
+                <span style="font-size:14pt">
+                    <center>
+                        <a href="https://arxiv.org/pdf/1910.02940.pdf">[PDF]</a>
+                    </center> </span> </td>
+            <td>
+                <span style="font-size:14pt">
+                    <center>
+                        <a href="materials/bibtex.txt">[Bibtex]</a>
+                    </center>
+                </span>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <center><h1>Try our code</h1></center>
+    <table align=center width=1000px>
+        <tr>
+            <center>
+                <a href="https://github.com/hangg7/deformable-kernels">
+                    <img class="round" style="height:400" src="materials/operators.png"/>
+                </a>
+                <br>
+                <br>
+            </center>
+        </tr>
+        <tr>
+            <center>
+                <a href="https://github.com/hangg7/deformable-kernels">
+                    <img class="round" style="height:400" src="materials/dk_forward.png"/>
+                </a>
+                <br>
+            </center>
+        </tr>
+    </table>
+    <table align=center width=800px>
+        <tr>
+            <center>
+                <span style="font-size:28px">&nbsp;<a href="https://github.com/hangg7/deformable-kernels">[GitHub]</a>
+                </span>
+                <span style="font-size:28px"><a></a></span>
+                <br>
+            </center>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table align=center width=1100px>
+        <tr>
+            <td width=400px>
+                <left>
+                <center><h1>Related Work</h1></center>
+                <!-- <span style="font-size:24px"><center><b> Previous Work </b> </center></span><br> -->
+                Brandon Yang, Gabriel Bender, Quoc V. Le, Jiquan Ngiam.
+                <b>CondConv: Conditionally Parameterized Convolutions for Efficient Inference.</b>
+                In <i>NeurIPS</i>, Apr 2019.
+                <a href="http://papers.nips.cc/paper/8412-condconv-conditionally-parameterized-convolutions-for-efficient-inference.pdf">[PDF]</a>
+                <a href="https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet/condconv">[GitHub]</a>
+                <br>
+
+                Xizhou Zhu, Han Hu, Stephen Lin, Jifeng Dai.
+                <b>Deformable ConvNets V2: More Deformable, Better Results.</b>
+                In <i>CVPR</i>, Nov 2018.
+                <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Deformable_ConvNets_V2_More_Deformable_Better_Results_CVPR_2019_paper.pdf">[PDF]</a>
+                <a href="https://github.com/msracver/Deformable-ConvNets">[GitHub]</a><br>
+
+                Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, Yichen Wei.
+                <b>Deformable Convolutional Networks.</b>
+                In <i>ICCV</i>, Mar 2017.
+                <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf">[PDF]</a><br>
+                <a href="https://github.com/msracver/Deformable-ConvNets">[GitHub]</a><br>
+                </left>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table align=center width=1100px>
+        <tr>
+            <td>
+                <left>
+                <center><h1>Acknowledgements</h1></center>
+                This work was done when HG and XZ were interns in Microsoft
+                Research Asia.
+                The webpage template was borrowed from some
+                <a href="https://richzhang.github.io/colorization/">
+                    colorful folks
+                </a>.
+                </left>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+  </body>
+</html>
