@@ -78,7 +78,7 @@
                     <a href="http://www.ee.columbia.edu/~sfchang/" style="white-space: nowrap">
                         Shih-Fu Chang</a>. During my undergrad years in
                     Jiao Tong University, I collaborated closely with
-                    <a href="http://http://www.cs.cmu.edu/~anind/" style="white-space: nowrap">
+                    <a href="http://www.cs.cmu.edu/~anind/" style="white-space: nowrap">
                         Anind Dey</a>.
                     </p>
                     <p>
@@ -92,62 +92,43 @@
                     <h2>Publications</h2>
 
                     <b>
-                        <a href="./#" class="publications title">
-                            Human Motion Prediction with Scene Context
+                        <a href="https://people.eecs.berkeley.edu/~zhecao/hmp/preprint.pdf" class="publications title">
+                            Long-term Human Motion Prediction with Scene Context
                         </a>
                     </b>
                     <br>
                     Zhe Cao,
                     <u>Hang Gao</u>,
-                    Qi-Zhi Cai,
                     Karttikeya Mangalam,
+                    Qi-Zhi Cai,
                     Minh Vo,
                     Jitendra Malik
                     <br>
-                    <div class="paper" id="cao2020human">
+                    <div class="paper" id="cao2020long">
                         Preprint
-                        / <a href="javascript:toggleblock('cao2020human_abs')">abstract</a>
+                        / <a href="javascript:toggleblock('cao2020long_abs')">abstract</a>
+                        / <a href="javascript:togglebib('cao2020long')">bib</a>
+                        / <a href="https://people.eecs.berkeley.edu/~zhecao/hmp/">website</a>
+                        / <a href="https://people.eecs.berkeley.edu/~zhecao/hmp/preprint.pdf">paper</a>
+                        / <a href="https://people.eecs.berkeley.edu/~zhecao/hmp/supplement.pdf">supp</a>
                         <p align="justify">
-                        <dir id="cao2020human_abs" class="abstract" style="display: none;">
-                        Humans have a remarkable ability to make accurate
-                        long-term planning conditioned on the surrounding world
-                        and their motion history. When facing the same
-                        situation, people behave differently according to
-                        his/her internal states. In this work, we introduce a
-                        computational framework to predict multi-modal human
-                        motion while considering scene context. Given a short
-                        sequence of 2D human poses history (say 1.5 seconds)
-                        and an instantaneous RGB image as inputs, our method is
-                        able to predict multiple possible future destinations,
-                        perform a long-term (3.5 seconds) 3D path planning
-                        towards the destination, and finally generate global 3D
-                        human pose sequences respecting the physical
-                        constraints of the environment. The key to our approach
-                        is to explicitly capture global contextual dependencies
-                        between the 2D pose history and the scene by predicting
-                        multi-modal 2D goal destinations following by a 3D path
-                        to achieve such a goal. We train our model on both
-                        real-world data with noisy ground-truth and our
-                        newly-created large-scale synthetic data with diverse
-                        scenes, characters, and motions. Both quantitative
-                        comparisons and qualitative results demonstrate that
-                        our method can generate plausible scene-adaptive
-                        multi-modal predictions that are not possible with
-                        existing state of the arts.
+                        <dir id="cao2020long_abs" class="abstract" style="display: none;">
+			Human movement is goal-directed and influenced by the spatial layout of the objects in the scene. To plan future human motion, it is crucial to perceive the environment -- imagine how hard it is to navigate a new room with lights off. Existing works on predicting human motion do not pay attention to the scene context and thus struggle in long-term prediction. In this work, we propose a novel three-stage framework that exploits scene context to tackle this task. Given a single scene image and 2D pose histories, our method first samples multiple human motion goals, then plans 3D human paths towards each goal, and finally predicts 3D human pose sequences following each path. For stable training and rigorous evaluation, we contribute a diverse synthetic dataset with clean annotations. In both synthetic and real datasets, our method shows consistent quantitative and qualitative improvements over existing methods. 
                         </dir>
                         </p>
                         <pre xml:space="preserve" style="display: none;">
-<!-- @inproceedings{cao2020human, -->
-    <!-- title={Deformable Kernels: Adapting Effective Receptive Fields for Object Deformation}, -->
-    <!-- author={Gao, Hang and Zhu, Xizhou and Lin, Steve and Dai, Jifeng}, -->
-    <!-- booktitle={International Conference on Learning Representations}, -->
-    <!-- year={2020}, -->
-<!-- } -->
+@incollection{cao2020long,
+    title={Long-term Human Motion Prediction with Scene Context},
+    author={Cao, Zhe and Gao, Hang and Mangalam, Karttikeya
+    and Cai, Qi-Zhi and Vo, Minh and Malik, Jitendra},
+    booktitle={arXiv},
+    year={2020},
+}
                         </pre>
                     </div>
 
                     <b>
-                        <a href="https://arxiv.org/pdf/1910.02940.pdf" class="publications title">
+                        <a href="https://arxiv.org/pdf/1910.02940v2.pdf" class="publications title">
                             Deformable Kernels: Adapting Effective Receptive Fields for Object Deformation
                         </a>
                     </b>
@@ -159,10 +140,10 @@
                     <br>
                     <div class="paper" id="gao2020deformable">
                         ICLR 2020
-                        / <a href="https://arxiv.org/abs/1910.02940">arxiv</a>
+                        / <a href="https://arxiv.org/abs/1910.02940v2">arxiv</a>
                         / <a href="javascript:toggleblock('gao2020deformable_abs')">abstract</a>
                         / <a href="javascript:togglebib('gao2020deformable')">bib</a>
-                        / <a href="https://http://people.eecs.berkeley.edu/~hangg/deformable-kernels/">project</a>
+                        / <a href="https://people.eecs.berkeley.edu/~hangg/deformable-kernels/">website</a>
                         / <a href="https://github.com/hangg7/deformable-kernels/">code</a>
                         <p align="justify">
                         <dir id="gao2020deformable_abs" class="abstract" style="display: none;">
