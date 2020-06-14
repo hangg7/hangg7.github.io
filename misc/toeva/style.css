@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: black;
+  touch-action: none;
 }
 .canvas {
   position: absolute;
@@ -9,4 +10,5 @@ body {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  touch-action: none;
 }
