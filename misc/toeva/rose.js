@@ -180,8 +180,8 @@ const renderer = new THREE.WebGLRenderer({
   alpha: true,
   antialias: true,
 });
-const innerWidth = Math.min(window.innerWidth / 2, 720);
-const innerHeight = Math.min(window.innerHeight / 2, 720);
+const innerWidth = Math.min(window.innerWidth / 2, 480);
+const innerHeight = Math.min(window.innerHeight / 2, 240);
 renderer.setSize(innerWidth, innerHeight);
 canvas.appendChild(renderer.domElement);
 
@@ -257,8 +257,8 @@ function onWindowResize(event) {
   camera.bottom = -height;
   camera.updateProjectionMatrix();
 
-  let innerWidth = Math.min(window.innerWidth / 2, 720);
-  let innerHeight = Math.min(window.innerHeight / 2, 720);
+  let innerWidth = Math.min(window.innerWidth / 2, 480);
+  let innerHeight = Math.min(window.innerHeight / 2, 240);
   renderer.setSize(innerWidth, innerHeight);
   if (uniforms.iResolution !== undefined) {
     uniforms.iResolution.value.x = innerWidth;
