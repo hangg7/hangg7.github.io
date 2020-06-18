@@ -10,7 +10,7 @@
 set -e -x
 
 # public resources
-chmod -R 755 css fonts js
+chmod -R 755 css fonts js assets
 chmod 744 index.html
 
 # private but accessable at the end node
