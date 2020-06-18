@@ -19,4 +19,4 @@ chmod 701 projects
 
 chmod -R 755 misc
 chmod 701 misc
-chmod og-x misc/toeva/rose.js misc/toeva/style.css
+chmod og-x misc/toeva/rose.js misc/toeva/styles.css
