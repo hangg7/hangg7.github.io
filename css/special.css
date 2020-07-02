@@ -62,6 +62,10 @@ a:hover {
   color: #f89d13;
 }
 
+span.highlight {
+  background-color: yellow;
+}
+
 /* Footer */
 
 #footer {
