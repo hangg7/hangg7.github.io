@@ -63,7 +63,9 @@ a:hover {
 }
 
 span.highlight {
-  background-color: yellow;
+  color: #bd1a0d;
+  font-weight: 700;
+  background-color: #f9f7f7;
 }
 
 /* Footer */
