@@ -1,9 +1,1539 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Under Construction</title>
-    </head>
-    <body>
-        <p>This page is under construction. Please come back soon!</p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- HTML Meta Tags -->
+    <title>Monocular Dynamic View Synthesis: A Reality Check</title>
+    <meta
+      name="description"
+      content="Monocular Dynamic View Synthesis: A Reality Check"
+    />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://hangg7.com/dycheck/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Monocular Dynamic View Synthesis: A Reality Check"
+    />
+    <meta property="og:description" content="TODO" />
+    <meta property="og:image" content="https://hangg7.com/dycheck/TODO.jpg" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://hangg7.com/dycheck/" />
+    <meta
+      name="twitter:title"
+      content="Monocular Dynamic View Synthesis: A Reality Check"
+    />
+    <meta name="twitter:description" content="TODO" />
+    <meta name="twitter:image" content="https://hangg7.com/dycheck/TODO.jpg" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Monocular Dynamic View Synthesis: A Reality Check</title>
+  </head>
+
+  <body>
+    <div class="container-fluid my-5 mx-auto" style="max-width: 840px">
+      <div class="row">
+        <h2 class="display-8 text-center">
+          Monocular Dynamic View Synthesis: A Reality Check
+        </h2>
+      </div>
+
+      <div class="row mt-2">
+        <div class="fs-4 fw-light text-center text-secondary">Neurips 2022</div>
+      </div>
+
+      <div class="row text-center mt-3 mx-auto" style="max-width: 800px">
+        <div class="col-md-2">
+          <a href="https://hangg7.com"> Hang Gao </a><sup>1</sup>
+        </div>
+        <div class="col-md-2">
+          <a href="https://www.liruilong.cn/"> Ruilong Li </a><sup>1</sup>
+        </div>
+        <div class="col-md-3">
+          <a href="http://shubhtuls.github.io/"> Shubham Tulsiani </a
+          ><sup>2</sup>
+        </div>
+        <div class="col-md-2">
+          <a href="https://bryanrussell.org/"> Bryan Russell </a><sup>3</sup>
+        </div>
+        <div class="col-md-3">
+          <a href="https://people.eecs.berkeley.edu/~kanazawa/">
+            Angjoo Kanazawa </a
+          ><sup>1</sup>
+        </div>
+      </div>
+
+      <div class="row text-center mt-3 mx-auto" style="max-width: 800px">
+        <div class="col-md-5">
+          <sup>1</sup>University of California, Berkeley
+        </div>
+        <div class="col-md-4"><sup>2</sup>Carnegie Mellon University</div>
+        <div class="col-md-3"><sup>3</sup>Adobe Research</div>
+      </div>
+
+      <div class="row mt-2 text-center">
+        <a class="nav-link col-3"></a>
+        <a
+          href="https://drive.google.com/file/d/14EZbh46Ej1A7Xs9iwQ_AMUbpPxhCfEIk/view?usp=sharing"
+          class="nav-link col-2"
+        >
+          <svg style="width: 64px; height: 64px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"
+            /></svg
+          ><br />
+          Paper
+        </a>
+        <a href="https://github.com/hangg7/dybench/" class="nav-link col-2">
+          <svg style="width: 64px; height: 64px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
+            /></svg
+          ><br />
+          &#60;/Code&#62;
+        </a>
+        <a
+          href="https://drive.google.com/drive/folders/1bjGw6NMxJAanoAyIBC1xvJJDUGM61LvU?usp=sharing"
+          class="nav-link col-2"
+        >
+          <svg style="width: 64px; height: 64px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"
+            /></svg
+          ><br />
+          Data
+        </a>
+        <a class="nav-link col-3"></a>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 mt-2">
+          <center>
+            <video width="75%" autoplay loop muted playsinline>
+              <source src="assets/teaser.mp4" type="video/mp4" />
+            </video>
+          </center>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <h2>Overview Video</h2>
+        <div class="text-center mt-3">
+          <div style="position: relative; padding-top: 56.25%">
+            <iframe
+              src="https://www.youtube.com/embed/WwESsNivJP8"
+              allowfullscreen
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <h3 class="mt-4 mb-3">Effective Multi-view</h3>
+        <div class="row">
+          <div class="col-md-12 mt-2">
+            <center>
+              <video width="75%" autoplay loop muted playsinline>
+                <source src="assets/emf-video.mp4" type="video/mp4" />
+              </video>
+            </center>
+          </div>
+        </div>
+        <p>
+          A monocular video contains <em>effective</em> multi-view cues when the
+          camera moves much faster than the scene, even though the underlying
+          scene is observed only once at each time step.
+        </p>
+      </div>
+
+      <div class="my-5">
+        <h3 class="mt-4 mb-3">Quantifying Effective Multi-view</h3>
+        <div class="row">
+          <div class="col-md-12 mt-2">
+            <center>
+              <video width="75%" autoplay muted playsinline>
+                <source src="assets/emf-stat-video.mp4" type="video/mp4" />
+              </video>
+            </center>
+          </div>
+        </div>
+        <p>
+          We propose to quantify the amount of effective multi-view signal
+          present in a monocular capture based on effective multi-view factors
+          (EMFs). Through EMFs, we find that the existing datasets have
+          magnitude larger multi-view cues comparing to casual captures.
+        </p>
+        <p>Click below to see the actual captures.</p>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                <b>Existing captures</b>
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  Existing captures contain either teleporting cameras or
+                  quasi-static scenes. This has caused a discrepancy from the
+                  casual captures from real life. All videos are played with
+                  actual frame rate.
+                </p>
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button
+                      class="nav-item nav-link active"
+                      id="dnerf-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#dnerf"
+                      role="tab"
+                      type="button"
+                      aria-controls="dnerf"
+                      aria-selected="true"
+                    >
+                      D-NeRF
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="nsff-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nsff"
+                      role="tab"
+                      type="button"
+                      aria-controls="invisible"
+                      aria-selected="false"
+                    >
+                      NSFF
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="nerfies-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nerfies"
+                      role="tab"
+                      type="button"
+                      aria-controls="invisible"
+                      aria-selected="false"
+                    >
+                      Nerfies
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="hypernerf-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#hypernerf"
+                      role="tab"
+                      type="button"
+                      aria-controls="invisible"
+                      aria-selected="false"
+                    >
+                      HyperNeRF
+                    </button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div
+                    class="tab-pane fade show active text-center"
+                    id="dnerf"
+                    role="tabpanel"
+                    aria-labelledby="dnerf-tab"
+                  >
+                    <video width="32.8%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1sigp6zXI33fIHgw11GBAg7uUEtonBqdN"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video width="32.8%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1rgGQe7bprayWd4O9OTwTZbm37cPrN2dB"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <video width="32.8%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=14i2Q4E2-B053IxS8t0UIoHIdbmTi3Sti"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col-md-4">Input video 1</div>
+                      <div class="col-md-4">Input video 2</div>
+                      <div class="col-md-4">Input video 3</div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="nsff"
+                    role="tabpanel"
+                    aria-labelledby="nsff-tab"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1iQYNodO66N-Mtsj5QPFBpqAFuwFrPYEq"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col-md-6">
+                        <p>Multi-view capture (4 out of 12)</p>
+                      </div>
+                      <div class="col-md-6"><p>Input video</p></div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="nerfies"
+                    role="tabpanel"
+                    aria-labelledby="nerfies-tab"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1iFFQ0VzHRT3CpWa2epard2-e5Ob17-y6"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col-md-8"><p>Multi-view capture</p></div>
+                      <div class="col-md-4"><p>Input video</p></div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="hypernerf"
+                    role="tabpanel"
+                    aria-labelledby="hypernerf-tab"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1eLRg-MbjRxlGSamYGyxO3zkQKz34QYD4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col-md-8"><p>Multi-view capture</p></div>
+                      <div class="col-md-4"><p>Input video</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                <b>Casual captures (our iPhone dataset)</b>
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  Our iPhone dataset consists of 14 casually captured training
+                  videos from a hand-held smartphone without camera
+                  teleportation. For 7 sequences shown on the top, we also
+                  provide validation data from a multi-camera rig.
+                </p>
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button
+                      class="nav-item nav-link active"
+                      id="tab-apple"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-apple"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-apple"
+                      aria-selected="true"
+                    >
+                      apple
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-block"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-block"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-block"
+                      aria-selected="false"
+                    >
+                      block
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-paper-windmill"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-paper-windmill"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-paper-windmill"
+                      aria-selected="false"
+                    >
+                      paper-windmill
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-space-out"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-space-out"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-space-out"
+                      aria-selected="false"
+                    >
+                      space-out
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-spin"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-spin"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-spin"
+                      aria-selected="false"
+                    >
+                      spin
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-teddy"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-teddy"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-teddy"
+                      aria-selected="false"
+                    >
+                      teddy
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-wheel"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-wheel"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-wheel"
+                      aria-selected="false"
+                    >
+                      wheel
+                    </button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div
+                    class="tab-pane fade show active text-center"
+                    id="video-apple"
+                    role="tabpanel"
+                    aria-labelledby="tab-apple"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1UvhH3ffKZH-O_qJv295sikoAmDT3S7vO"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col"><p>Test view 1</p></div>
+                      <div class="col"><p>Test view 2</p></div>
+                      <div class="col-5">
+                        <p>Input video (w/ depth and mask)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-block"
+                    role="tabpanel"
+                    aria-labelledby="tab-block"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1Thly7Hyx3mqOYAEk5PsZzx5jrrXa2avD"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col"><p>Test view 1</p></div>
+                      <div class="col"><p>Test view 2</p></div>
+                      <div class="col-5">
+                        <p>Input video (w/ depth and mask)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-paper-windmill"
+                    role="tabpanel"
+                    aria-labelledby="tab-paper-windmill"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1XdraKdTT9O6Ux5kEeRtPYZyqITMHBPM3"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col"><p>Test view 1</p></div>
+                      <div class="col"><p>Test view 2</p></div>
+                      <div class="col-5">
+                        <p>Input video (w/ depth and mask)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-space-out"
+                    role="tabpanel"
+                    aria-labelledby="tab-space-out"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1-KkJs0gU8RWquj6JMqyC4z5PogICBakn"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col"><p>Test view 1</p></div>
+                      <div class="col"><p>Test view 2</p></div>
+                      <div class="col-5">
+                        <p>Input video (w/ depth and mask)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-spin"
+                    role="tabpanel"
+                    aria-labelledby="tab-spin"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=164s3BVz2JaONoKBpT0x6vpaqeCseqetG"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col"><p>Test view 1</p></div>
+                      <div class="col"><p>Test view 2</p></div>
+                      <div class="col-5">
+                        <p>Input video (w/ depth and mask)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-teddy"
+                    role="tabpanel"
+                    aria-labelledby="tab-teddy"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1k4GntUN9bMDbtKRXEaz2Dhh2STVMiRCt"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col"><p>Test view 1</p></div>
+                      <div class="col"><p>Test view 2</p></div>
+                      <div class="col-5">
+                        <p>Input video (w/ depth and mask)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-wheel"
+                    role="tabpanel"
+                    aria-labelledby="tab-wheel"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1xBnlne4NsNKWDNyFASTKkQLco938VOaB"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div
+                      class="row text-center mx-auto"
+                      style="max-width: 800px"
+                    >
+                      <div class="col">Test view</div>
+                      <div class="col-7">Input video (w/ depth and mask)</div>
+                    </div>
+                  </div>
+                  <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <button
+                        class="nav-item nav-link active"
+                        id="tab-backpack"
+                        data-bs-toggle="tab"
+                        data-bs-target="#video-backpack"
+                        role="tab"
+                        type="button"
+                        aria-controls="tab-backpack"
+                        aria-selected="true"
+                      >
+                        backpack
+                      </button>
+                      <button
+                        class="nav-item nav-link"
+                        id="tab-creeper"
+                        data-bs-toggle="tab"
+                        data-bs-target="#video-creeper"
+                        role="tab"
+                        type="button"
+                        aria-controls="tab-creeper"
+                        aria-selected="false"
+                      >
+                        creeper
+                      </button>
+                      <button
+                        class="nav-item nav-link"
+                        id="tab-handwavy"
+                        data-bs-toggle="tab"
+                        data-bs-target="#video-handwavy"
+                        role="tab"
+                        type="button"
+                        aria-controls="tab-handwavy"
+                        aria-selected="false"
+                      >
+                        handwavy
+                      </button>
+                      <button
+                        class="nav-item nav-link"
+                        id="tab-haru-sit"
+                        data-bs-toggle="tab"
+                        data-bs-target="#video-haru-sit"
+                        role="tab"
+                        type="button"
+                        aria-controls="tab-haru-sit"
+                        aria-selected="false"
+                      >
+                        haru-sit
+                      </button>
+                      <button
+                        class="nav-item nav-link"
+                        id="tab-mochi-high-five"
+                        data-bs-toggle="tab"
+                        data-bs-target="#video-mochi-high-five"
+                        role="tab"
+                        type="button"
+                        aria-controls="tab-mochi-high-five"
+                        aria-selected="false"
+                      >
+                        mochi-high-five
+                      </button>
+                      <button
+                        class="nav-item nav-link"
+                        id="tab-pillow"
+                        data-bs-toggle="tab"
+                        data-bs-target="#video-pillow"
+                        role="tab"
+                        type="button"
+                        aria-controls="tab-pillow"
+                        aria-selected="false"
+                      >
+                        pillow
+                      </button>
+                      <button
+                        class="nav-item nav-link"
+                        id="tab-sriracha-tree"
+                        data-bs-toggle="tab"
+                        data-bs-target="#video-sriracha-tree"
+                        role="tab"
+                        type="button"
+                        aria-controls="tab-sriracha-tree"
+                        aria-selected="false"
+                      >
+                        sriracha-tree
+                      </button>
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent">
+                    <div
+                      class="tab-pane fade show active text-center"
+                      id="video-backpack"
+                      role="tabpanel"
+                      aria-labelledby="tab-backpack"
+                      style="background-color: white"
+                    >
+                      <video width="100%" autoplay loop muted controls>
+                        <source
+                          src="https://drive.google.com/uc?export=preview&id=1dNOC8z6zXKH23Uz-qZBS0Rs-YzSrX9Gn"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                    <div
+                      class="tab-pane fade text-center"
+                      id="video-creeper"
+                      role="tabpanel"
+                      aria-labelledby="tab-creeper"
+                      style="background-color: white"
+                    >
+                      <video width="100%" autoplay loop muted controls>
+                        <source
+                          src="https://drive.google.com/uc?export=preview&id=1-zvBGpav9TRbXyzUQQG1gFco1srXLlN0"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                    <div
+                      class="tab-pane fade text-center"
+                      id="video-handwavy"
+                      role="tabpanel"
+                      aria-labelledby="tab-handwavy"
+                      style="background-color: white"
+                    >
+                      <video width="100%" autoplay loop muted controls>
+                        <source
+                          src="https://drive.google.com/uc?export=preview&id=1aYDWethHCFXIv2iR7bGt973JJx_a4d-o"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                    <div
+                      class="tab-pane fade text-center"
+                      id="video-haru-sit"
+                      role="tabpanel"
+                      aria-labelledby="tab-haru-sit"
+                      style="background-color: white"
+                    >
+                      <video width="100%" autoplay loop muted controls>
+                        <source
+                          src="https://drive.google.com/uc?export=preview&id=1w2-33UAi1B7GCR86blFpx1lIoFUiD0U5"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                    <div
+                      class="tab-pane fade text-center"
+                      id="video-mochi-high-five"
+                      role="tabpanel"
+                      aria-labelledby="tab-mochi-high-five"
+                      style="background-color: white"
+                    >
+                      <video width="100%" autoplay loop muted controls>
+                        <source
+                          src="https://drive.google.com/uc?export=preview&id=1cSjA31LhiEqJt-h8xKpSf5XfNvJxMTa0"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                    <div
+                      class="tab-pane fade text-center"
+                      id="video-pillow"
+                      role="tabpanel"
+                      aria-labelledby="tab-pillow"
+                      style="background-color: white"
+                    >
+                      <video width="100%" autoplay loop muted controls>
+                        <source
+                          src="https://drive.google.com/uc?export=preview&id=1LqOVXKCwnCUPMx7YKNmN6YKH77SgJzQo"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                    <div
+                      class="tab-pane fade text-center"
+                      id="video-sriracha-tree"
+                      role="tabpanel"
+                      aria-labelledby="tab-sriracha-tree"
+                      style="background-color: white"
+                    >
+                      <video width="100%" autoplay loop muted controls>
+                        <source
+                          src="https://drive.google.com/uc?export=preview&id=1tlTThzvUxGOY9PJLhtWNwBNk_c5i5G0n"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                  <p class="text-center">Input video (w/ depth and mask)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <h3 class="mt-4 mb-3">Towards better experimentation practice</h3> -->
+
+      <!-- <h3 class="mt-4 mb-3">Difficulties in Image-Based Evaluation.</h3> -->
+
+      <!-- <p> -->
+      <!--   For monocular capture, when evaluating view synthesis with image -->
+      <!--   metrics, e.g., PSNR, SSIM and LPIPS, the test view may contain regions -->
+      <!--   that have not been observed at all by the training cameras. Evaluations -->
+      <!--   in such regions are not informative. -->
+      <!-- </p> -->
+
+      <!-- <img -->
+      <!--   src="assets/co-vis.png" -->
+      <!--   alt="Co Vis" -->
+      <!--   width="100%" -->
+      <!--   style="margin-left: auto; margin-right: auto; display: block" -->
+      <!-- /> -->
+
+      <!-- <p> -->
+      <!--   Previous methods bypassed this issue by teleporting cameras between -->
+      <!--   multiple cameras to achieve maximum coverage of the scene during -->
+      <!--   training. However we propose to address this issue by ignoring those -->
+      <!--   regions that are unseen during training with a -->
+      <!--   <em>co-visiblity</em> mask between training and test views. -->
+      <!-- </p> -->
+
+      <!-- <h3 class="mt-4 mb-3">Correspondence Modeling.</h3> -->
+
+      <!-- <p> -->
+      <!--   Using Nerfies as an example, we show that the model renders high-quality -->
+      <!--   results without modeling accurate correspondences. Transferred keypoints -->
+      <!--   are colorized by a heatmap of end-point error, overlaid on the -->
+      <!--   ground-truth target frame. -->
+      <!-- </p> -->
+
+      <!-- <img -->
+      <!--   src="assets/corr.png" -->
+      <!--   alt="Corr" -->
+      <!--   width="100%" -->
+      <!--   style="margin-left: auto; margin-right: auto; display: block" -->
+      <!-- /> -->
+
+      <!-- <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-item nav-link active" id="tab-corr-1"
+                  data-bs-toggle="tab" data-bs-target="#video-corr-1" role="tab" type="button"
+                  aria-controls="tab-corr-1" aria-selected="true">example1</button>
+                  <button class="nav-item nav-link" id="tab-corr-2"
+                  data-bs-toggle="tab" data-bs-target="#video-corr-2" role="tab" type="button"
+                  aria-controls="tab-corr-2" aria-selected="false">example2</button>
+                  <button class="nav-item nav-link" id="tab-corr-3"
+                  data-bs-toggle="tab" data-bs-target="#video-corr-3" role="tab" type="button"
+                  aria-controls="tab-corr-3" aria-selected="false">example3</button>
+                  <button class="nav-item nav-link" id="tab-corr-4"
+                  data-bs-toggle="tab" data-bs-target="#video-corr-4" role="tab" type="button"
+                  aria-controls="tab-corr-4" aria-selected="false">example4</button>
+                </div>
+            </nav> -->
+      <!-- TODO -->
+      <!-- <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active text-center" id="video-corr-1"
+                role="tabpanel" aria-labelledby="tab-corr-1" style="background-color: white;">
+                    <img src="assets/TODO.png" alt="EMFs" width="80%" style="margin-left:auto; margin-right:auto; display:block;">
+                </div>
+                <div class="tab-pane fade text-center" id="video-corr-2"
+                role="tabpanel" aria-labelledby="tab-corr-2" style="background-color: white;">
+                    <img src="assets/TODO.png" alt="EMFs" width="80%" style="margin-left:auto; margin-right:auto; display:block;">
+                </div>
+                <div class="tab-pane fade text-center" id="video-corr-3"
+                role="tabpanel" aria-labelledby="tab-corr-3" style="background-color: white;">
+                    <img src="assets/TODO.png" alt="EMFs" width="80%" style="margin-left:auto; margin-right:auto; display:block;">
+                </div>
+                <div class="tab-pane fade text-center" id="video-corr-4"
+                role="tabpanel" aria-labelledby="tab-corr-4" style="background-color: white;">
+                    <img src="assets/TODO.png" alt="EMFs" width="80%" style="margin-left:auto; margin-right:auto; display:block;">
+                </div>
+            </div> -->
+
+      <div class="row my-5">
+        <h3 class="mt-4 mb-3">Impact of Effective Multi-view</h3>
+        <p>
+          We compare the existing teleporting setting and our non-teleporting
+          settings.
+        </p>
+        <p>
+          Our results show that the effective multi-view in the existing
+          experimental protocol inflates the synthesis quality of prior methods,
+          and that truly monocular captures are more challenging.
+        </p>
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button
+              class="nav-item nav-link active"
+              id="tab-tele-tnerf"
+              data-bs-toggle="tab"
+              data-bs-target="#video-tele-tnerf"
+              role="tab"
+              type="button"
+              aria-controls="tab-tele-tnerf"
+              aria-selected="true"
+            >
+              T-NeRF
+            </button>
+            <button
+              class="nav-item nav-link"
+              id="tab-tele-nerfies"
+              data-bs-toggle="tab"
+              data-bs-target="#video-tele-nerfies"
+              role="tab"
+              type="button"
+              aria-controls="tab-tele-nerfies"
+              aria-selected="false"
+            >
+              Nerfies
+            </button>
+            <button
+              class="nav-item nav-link"
+              id="tab-tele-nsff"
+              data-bs-toggle="tab"
+              data-bs-target="#video-tele-nsff"
+              role="tab"
+              type="button"
+              aria-controls="tab-tele-nsff"
+              aria-selected="false"
+            >
+              NSFF
+            </button>
+            <button
+              class="nav-item nav-link"
+              id="tab-tele-hypernerf"
+              data-bs-toggle="tab"
+              data-bs-target="#video-tele-hypernerf"
+              role="tab"
+              type="button"
+              aria-controls="tab-tele-hypernerf"
+              aria-selected="false"
+            >
+              HyperNeRF
+            </button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active text-center"
+            id="video-tele-tnerf"
+            role="tabpanel"
+            aria-labelledby="tab-tele-tnerf"
+            style="background-color: white"
+          >
+            <video width="45%" autoplay loop muted controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=1y7SrPIp3Dgz_V_yFu2ZEGquZiu7mtYYU"
+                type="video/mp4"
+              />
+            </video>
+            <video width="45%" autoplay loop muted controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=1wWFrFbgnobXb-Tu3JxwwBEdYPgFE3BxV"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div
+            class="tab-pane fade text-center"
+            id="video-tele-nerfies"
+            role="tabpanel"
+            aria-labelledby="tab-tele-nerfies"
+            style="background-color: white"
+          >
+            <video width="45%" autoplay loop muted controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=1nh06JseQi74yzIIdH3Uz3vSUkU4Ebkrc"
+                type="video/mp4"
+              />
+            </video>
+            <video width="45%" autoplay loop muted controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=166HljZkIEYeej8fz0Y2nTJGsUWP2MHF5"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div
+            class="tab-pane fade text-center"
+            id="video-tele-nsff"
+            role="tabpanel"
+            aria-labelledby="tab-tele-nsff"
+            style="background-color: white"
+          >
+            <video width="45%" autoplay loop muted controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=1F0mnPOkd5G52Ql-RhhwCCnRLg4vZoOkx"
+                type="video/mp4"
+              />
+            </video>
+            <video width="45%" autoplay loop muted controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=199wrA4n87KdomMGInPJW5yWQIqM11RHb"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div
+            class="tab-pane fade text-center"
+            id="video-tele-hypernerf"
+            role="tabpanel"
+            aria-labelledby="tab-tele-hypernerf"
+            style="background-color: white"
+          >
+            <video width="45%" autoplay loop muted controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=1EpH-cyFZepnCL5WWwMqooMu4fUBtWMGX"
+                type="video/mp4"
+              />
+            </video>
+            <video width="45%" autoplay loop muted controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=1fz8qEpxn4U5Uhw3v_bE3MOBslHR4hqAj"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+        <div class="row text-center mx-auto" style="max-width: 800px">
+          <div class="col">Novel-view rendering</div>
+          <div class="col">Bullet-time rendering</div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <h3 class="mt-4 mb-3">Reality Check without Effective Multi-view</h3>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                <b>On Nerfies-HyperNeRF dataset</b>
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  The state-of-the-art methods struggle in modeling acurrate
+                  shape of moving objects. We also find that the baseline
+                  time-conditioned NeRF (T-NeRF; in the first column) is quite
+                  competitive in this setting.
+                </p>
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button
+                      class="nav-item nav-link active"
+                      id="tab-bench-scene1-sec2"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-scene1-sec2"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-scene1-sec2"
+                      aria-selected="true"
+                    >
+                      chicken
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-scene2-sec2"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-scene2-sec2"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-scene2-sec2"
+                      aria-selected="true"
+                    >
+                      peel-banana
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-scene3-sec2"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-scene3-sec2"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-scene3-sec2"
+                      aria-selected="true"
+                    >
+                      tail
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-scene4-sec2"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-scene4-sec2"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-scene4-sec2"
+                      aria-selected="true"
+                    >
+                      toby-sit
+                    </button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div
+                    class="tab-pane fade show active text-center"
+                    id="video-bench-scene1-sec2"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-scene1-sec2"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1ZYfx57J2mI14Qe1Xrt2mw4AR1Ke8Pf2G"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-scene2-sec2"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-scene2-sec2"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1PnhTxRO9zVsFM-BfhmwFAjm7ck6ed6ss"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-scene3-sec2"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-scene3-sec2"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1P8fWUNbnBXWQBEX_OK2YQ1vP4k0VfK-c"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-scene4-sec2"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-scene4-sec2"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1EB6VaGhGJ8g8igRpSeK_wL6HQ1X-T30p"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+                <div class="row text-center mx-auto" style="max-width: 800px">
+                  <div class="col-md-3"><p>T-NeRF</p></div>
+                  <div class="col-md-3"><p>Nerfies</p></div>
+                  <div class="col-md-3"><p>HyperNeRF</p></div>
+                  <div class="col-md-3"><p>NSFF</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                <b>On our iPhone dataset</b>
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  We find that existing approaches perform poorly (mPSNR: 14-16
+                  dB) out-of-the-box on the proposed iPhone dataset with more
+                  diverse and complex real-life motions.
+                </p>
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button
+                      class="nav-item nav-link active"
+                      id="tab-bench-raw-scene1"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-raw-scene1"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-raw-scene1"
+                      aria-selected="true"
+                    >
+                      paper-windmill
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-raw-scene2"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-raw-scene2"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-raw-scene2"
+                      aria-selected="true"
+                    >
+                      sriracha
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-raw-scene3"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-raw-scene3"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-raw-scene3"
+                      aria-selected="true"
+                    >
+                      teddy
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-raw-scene4"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-raw-scene4"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-raw-scene4"
+                      aria-selected="true"
+                    >
+                      handwavy
+                    </button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div
+                    class="tab-pane fade show active text-center"
+                    id="video-bench-raw-scene1"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-raw-scene1"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1Ogywa2pvFPJBwgzc8GsL-QeHue3I-HFF"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-raw-scene2"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-raw-scene2"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1qXzgjPIfbb_oM8N6EnTilLIUb3lpxRB1"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-raw-scene3"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-raw-scene3"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1TrqXwdBxPQEhRY_ye9BgcadL5kclItjK"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-raw-scene4"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-raw-scene4"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1PboualmSqtcGAdxCGwpU8oKXCRrbU8jl"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+                <div class="row text-center mx-auto" style="max-width: 800px">
+                  <div class="col-md-3"><p>T-NeRF</p></div>
+                  <div class="col-md-3"><p>Nerfies</p></div>
+                  <div class="col-md-3"><p>HyperNeRF</p></div>
+                  <div class="col-md-3"><p>NSFF</p></div>
+                </div>
+
+                <p>
+                  We explored incorporating additional regularizations from
+                  recent advances in neural rendering, including background
+                  augmentation, depth supervision, and sparsity regularization.
+                  We denote the methods with these enhancements as their "++"
+                  version. Even though the results get much better, there is
+                  still a large room for improvement.
+                </p>
+
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button
+                      class="nav-item nav-link active"
+                      id="tab-bench-scene1"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-scene1"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-scene1"
+                      aria-selected="true"
+                    >
+                      Paper-windmill
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-scene2"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-scene2"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-scene2"
+                      aria-selected="true"
+                    >
+                      Sriracha
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-scene3"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-scene3"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-scene3"
+                      aria-selected="true"
+                    >
+                      Teddy
+                    </button>
+                    <button
+                      class="nav-item nav-link"
+                      id="tab-bench-scene4"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-bench-scene4"
+                      role="tab"
+                      type="button"
+                      aria-controls="tab-bench-scene4"
+                      aria-selected="true"
+                    >
+                      Handwavy
+                    </button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div
+                    class="tab-pane fade show active text-center"
+                    id="video-bench-scene1"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-scene1"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1h8rYLt4gK_BpfukqIgkJm2RcU1Pmtr_p"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-scene2"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-scene2"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1T8UDYAnqMpViSyC71xbxrsNAJdEMtolY"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-scene3"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-scene3"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1Vjs-zQ3NhgpAeTRXhdavnFv5mEZ2VWn2"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="tab-pane fade text-center"
+                    id="video-bench-scene4"
+                    role="tabpanel"
+                    aria-labelledby="tab-bench-scene4"
+                    style="background-color: white"
+                  >
+                    <video width="100%" autoplay loop muted controls>
+                      <source
+                        src="https://drive.google.com/uc?export=preview&id=1-dUjdxvlKUl0JnGJexwvqY4l2oTpNFOl"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+                <div class="row text-center mx-auto" style="max-width: 800px">
+                  <div class="col-md-3"><p>T-NeRF++</p></div>
+                  <div class="col-md-3"><p>Nerfies++</p></div>
+                  <div class="col-md-3"><p>HyperNeRF++</p></div>
+                  <div class="col-md-3"><p>NSFF</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <h2>BibTex</h2>
+        <div class="col-md-12 mt-3">
+          <pre>
+      @inproceedings{gao2022dynamic,
+          title={Monocular Dynamic View Synthesis: A Reality Check},
+          author={Gao, Hang and
+                  Li, Ruilong and
+                  Tulsiani, Shubham and
+                  Russell, Bryan and
+                  Kanazawa, Angjoo},
+          booktitle={Conference on Neural Information Processing Systems (Neurips)},
+          year={2022},
+      }
+      </pre
+          >
+        </div>
+      </div>
+
+      <div class="my-5">
+        <h2>Acknowledgement</h2>
+        <p>
+          We would like to thank Zhengqi Li and Keunhong Park for valuable
+          feedback and discussions; Matthew Tancik and Ethan Weber for
+          proofreading. We are also grateful to our pets: Sriracha, Haru, and
+          Mochi, for being good during capture. This project is generously
+          supported in part by the CONIX Research Center, sponsored by DARPA, as
+          well as the BDD and BAIR sponsors.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <hr />
+        <small
+          >Inspired by
+          <a href="https://grail.cs.washington.edu/projects/humannerf/"
+            >HumanNeRF</a
+          >
+        </small>
+      </div>
+    </div>
+  </body>
 </html>
