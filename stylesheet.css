@@ -1,0 +1,68 @@
+a {
+  color: #1c6e2b;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #7fc946;
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+strong {
+  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+heading {
+  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+papertitle {
+  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+name {
+  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+}
+
+.fade {
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}

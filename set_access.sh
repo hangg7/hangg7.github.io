@@ -9,11 +9,11 @@
 
 set -e -x
 
-# public resources
-chmod -R 755 css fonts js assets
+# Public resources
+chmod -R 755 assets
 chmod 744 index.html
 
-# private but accessable at the end node
+# Private but accessable at the end node
 chmod -R 755 projects
 chmod 701 projects
 
