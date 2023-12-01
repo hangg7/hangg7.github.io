@@ -160,6 +160,63 @@
               "
             >
               <tbody>
+                <tr onmouseout="nerfacc_stop()" onmouseover="nerfacc_start()">
+                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 2px solid #000">
+                      <div class="two" id="nerfacc_teaser">
+                        <video width="100%" height="100%" muted autoplay loop>
+                          <source
+                            src="assets/nerfacc_after.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src="assets/nerfacc_before.png" width="160" />
+                    </div>
+                    <script type="text/javascript">
+                      function nerfacc_start() {
+                        document.getElementById(
+                          "nerfacc_teaser"
+                        ).style.opacity = "1";
+                      }
+                      function nerfacc_stop() {
+                        document.getElementById(
+                          "nerfacc_teaser"
+                        ).style.opacity = "0";
+                      }
+                      nerfacc_stop();
+                    </script>
+                  </td>
+                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                    <a href="https://www.nerfacc.com/">
+                      <papertitle
+                        >NerfAcc: Efficient Sampling Accelerates
+                        NeRFs</papertitle
+                      >
+                    </a>
+                    <br />
+                    <a href="https://www.liruilong.cn/">Ruilong Li</a>,
+                    <strong>Hang Gao</strong>,
+                    <a href="https://www.matthewtancik.com/">Matthew Tancik</a>,
+                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                      >Angjoo Kanazawa</a
+                    >
+                    <br />
+                    <em>ICCV</em>, 2023
+                    <br />
+                    <a href="https://www.nerfacc.com/">project page</a>
+                    /
+                    <a href="https://arxiv.org/abs/2305.04966">arXiv</a>
+                    /
+                    <a href="https://github.com/KAIR-BAIR/nerfacc/">code</a>
+                    <p></p>
+                    <p>
+                      We build and release a toolbox for accelerating all kinds
+                      of NeRFs by efficient sampling.
+                    </p>
+                  </td>
+                </tr>
                 <tr onmouseout="dycheck_stop()" onmouseover="dycheck_start()">
                   <td style="padding: 20px; width: 25%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
