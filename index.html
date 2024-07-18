@@ -208,28 +208,43 @@
                     </p>
                   </td>
                 </tr>
-                <tr>
+                <tr onmouseout="som_stop()" onmouseover="som_start()">
                   <td style="padding: 20px; width: 25%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
-                      <img src="assets/som.jpg" width="160" />
+                      <div class="two" id="som_teaser">
+                        <video width="100%" height="100%" muted autoplay loop>
+                          <source src="assets/som_after.mov" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src="assets/som_before.png" width="160" />
                     </div>
+                    <script type="text/javascript">
+                      function som_start() {
+                        document.getElementById("som_teaser").style.opacity =
+                          "1";
+                      }
+                      function som_stop() {
+                        document.getElementById("som_teaser").style.opacity =
+                          "0";
+                      }
+                      som_stop();
+                    </script>
                   </td>
                   <td style="padding: 20px; width: 75%; vertical-align: middle">
-                    <a
-                      href="https://drive.google.com/file/d/1W70kpp1g0y8HtC5SfSKryJ1G7mJLDPMN/"
-                    >
+                    <a href="https://shape-of-motion.github.io/">
                       <papertitle
-                        >Shape of Motion: Long-Range 3D Tracking from a Single
+                        >Shape of Motion: 4D Reconstruction from a Single
                         Video</papertitle
                       >
                     </a>
                     <br />
                     <a href="https://qianqianwang68.github.io/"
                       >Qianqian Wang*</a
-                    >, <strong>Hang Gao*</strong>,
+                    >,
                     <a href="https://people.eecs.berkeley.edu/~vye/"
                       >Vickie Ye*</a
-                    >,
+                    >, <strong>Hang Gao*</strong>,
                     <a href="https://www.linkedin.com/in/jakeaustin4701/"
                       >Jake Austin</a
                     >, <a href="https://zhengqili.github.io/">Zhengqi Li</a>,
@@ -237,8 +252,15 @@
                       >Angjoo Kanazawa</a
                     >
                     <br />
-                    <em>In submission</em>, 2024
+                    <em>arXiv</em>, 2024
                     <br />
+                    <a href="https://shape-of-motion.github.io/"
+                      >project page</a
+                    >
+                    /
+                    <a href="TODO">arXiv</a>
+                    /
+                    <a href="https://github.com/vye16/shape-of-motion/">code</a>
                     <p></p>
                     <p>
                       We represent a 3D dynamic scene by 4D gaussians which
