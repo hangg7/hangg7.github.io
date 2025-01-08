@@ -17,6 +17,9 @@ chmod 744 index.html
 chmod -R 755 projects
 chmod 701 projects
 
+chmod -R 755 private
+chmod 701 private
+
 chmod -R 755 misc
 chmod 701 misc
 chmod og-x misc/toeva/rose.js misc/toeva/styles.css
