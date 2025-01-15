@@ -28,6 +28,7 @@
     <table
       style="
         width: 100%;
+        height: auto;
         max-width: 800px;
         border: 0px;
         border-spacing: 0px;
@@ -42,6 +43,7 @@
             <table
               style="
                 width: 100%;
+                height: auto;
                 border: 0px;
                 border-spacing: 0px;
                 border-collapse: separate;
@@ -50,7 +52,7 @@
               "
             >
               <tbody>
-                <td style="padding: 2.5%; width: 100%; max-width: 37%">
+                <td style="padding: 2.5%; width: 37%; max-width: 37%">
                   <a href="assets/hang.png"
                     ><img
                       style="
@@ -65,12 +67,19 @@
                       class="hoverZoomLink"
                   /></a>
                 </td>
-                <td style="padding: 2.5%; width: 63%; vertical-align: middle">
+                <td
+                  style="
+                    padding: 2.5%;
+                    width: 63%;
+                    max-width: 63%;
+                    vertical-align: middle;
+                  "
+                >
                   <p style="text-align: center">
                     <name>Hang Gao</name>
                   </p>
                   <p>
-                    I am currently a final-year Ph.D. at
+                    I am a final-year Ph.D. at
                     <a
                       href="https://www.berkeley.edu/"
                       style="white-space: nowrap"
@@ -78,13 +87,13 @@
                     >, advised by
                     <a href="https://people.eecs.berkeley.edu/~kanazawa/">
                       Angjoo Kanazawa</a
-                    >. My research currently revolves around neural rendering
-                    and deep generative models.
+                    >. My research revolves around neural rendering and deep
+                    generative models.
                   </p>
                   <p>
-                    I did my undergrad at Jiao Tong University and got my master
-                    from Columbia. I have spent time working as a student
-                    researcher at Stability, Adobe and Microsoft.
+                    I studied at Jiao Tong University and Columbia. I have spent
+                    time working as a student researcher at Stability, Adobe and
+                    Microsoft.
                   </p>
                   <p>
                     <b>I am on the industrial job market this spring (2025).</b>
@@ -107,6 +116,7 @@
             <table
               style="
                 width: 100%;
+                height: auto;
                 border: 0px;
                 border-spacing: 0px;
                 border-collapse: separate;
@@ -117,14 +127,14 @@
               <tbody>
                 <tr>
                   <td
-                    style="padding: 20px; width: 100%; vertical-align: middle"
+                    style="padding: 2.5%; width: 100%; vertical-align: middle"
                   >
                     <heading>Research</heading>
                     <p>
-                      I am interested in 3D rendering from NeRF or deep
-                      generative model. My long-term goal is to build a
-                      loop-closed infini-open world renderer. I am currently
-                      doing post-training video models for camera controls.
+                      I am interested in high-quality 3D rendering, as well as
+                      techniques that make it scale well and/or real-time. My
+                      current research focus is post-training of video models
+                      for camera controls.
                     </p>
                   </td>
                 </tr>
@@ -133,6 +143,7 @@
             <table
               style="
                 width: 100%;
+                height: auto;
                 border: 0px;
                 border-spacing: 0px;
                 border-collapse: separate;
@@ -141,13 +152,33 @@
               "
             >
               <tbody>
-                <tr>
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                <tr onmouseout="soar_stop()" onmouseover="soar_start()">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
-                      <img src="assets/soar.jpg" width="160" />
+                      <div class="two" id="soar_teaser">
+                        <video width="100%" muted autoplay loop>
+                          <source
+                            src="assets/soar_after.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src="assets/soar_before.jpg" width="100%" />
                     </div>
+                    <script type="text/javascript">
+                      function soar_start() {
+                        document.getElementById("soar_teaser").style.opacity =
+                          "1";
+                      }
+                      function soar_stop() {
+                        document.getElementById("soar_teaser").style.opacity =
+                          "0";
+                      }
+                      soar_stop();
+                    </script>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://soar-avatar.github.io/">
                       <papertitle
                         >SOAR: Self-Occluded Avatar Recovery from a Single
@@ -170,22 +201,25 @@
                     <a href="https://github.com/hangg7/soar">code</a>
                     <p></p>
                     <p>
-                      We recover human avatars from self-occluded internet
-                      videos where people only show parts or sides of their
-                      body.
+                      We recover complete human avatars from self-occluded
+                      videos in the wild.
                     </p>
                   </td>
                 </tr>
                 <tr onmouseout="som_stop()" onmouseover="som_start()">
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="som_teaser">
-                        <video width="100%" height="100%" muted autoplay loop>
+                        <video width="100%" muted autoplay loop>
                           <source src="assets/som_after.mov" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      <img src="assets/som_before.png" width="160" />
+                      <img
+                        src="assets/som_before.png"
+                        width="100%"
+                        height="100%"
+                      />
                     </div>
                     <script type="text/javascript">
                       function som_start() {
@@ -199,7 +233,7 @@
                       som_stop();
                     </script>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://shape-of-motion.github.io/">
                       <papertitle
                         >Shape of Motion: 4D Reconstruction from a Single
@@ -231,16 +265,16 @@
                     <a href="https://github.com/vye16/shape-of-motion/">code</a>
                     <p></p>
                     <p>
-                      We represent a 3D dynamic scene by 4D gaussians which
-                      allows accurate 3D tracking and dynamic-view synthesis.
+                      We propose a method for joint 4D reconstruction and 3D
+                      tracking that works reasonably well in-the-wild.
                     </p>
                   </td>
                 </tr>
                 <tr onmouseout="nerfacc_stop()" onmouseover="nerfacc_start()">
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="nerfacc_teaser">
-                        <video width="100%" height="100%" muted autoplay loop>
+                        <video width="100%" muted autoplay loop>
                           <source
                             src="assets/nerfacc_after.mp4"
                             type="video/mp4"
@@ -248,7 +282,7 @@
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      <img src="assets/nerfacc_before.png" width="160" />
+                      <img src="assets/nerfacc_before.png" width="100%" />
                     </div>
                     <script type="text/javascript">
                       function nerfacc_start() {
@@ -264,7 +298,7 @@
                       nerfacc_stop();
                     </script>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://www.nerfacc.com/">
                       <papertitle
                         >NerfAcc: Efficient Sampling Accelerates
@@ -294,10 +328,10 @@
                   </td>
                 </tr>
                 <tr onmouseout="dycheck_stop()" onmouseover="dycheck_start()">
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="dycheck_teaser">
-                        <video width="100%" height="100%" muted autoplay loop>
+                        <video width="100%" muted autoplay loop>
                           <source
                             src="assets/dycheck_after.mp4"
                             type="video/mp4"
@@ -305,7 +339,7 @@
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      <img src="assets/dycheck_before.png" width="160" />
+                      <img src="assets/dycheck_before.png" width="100%" />
                     </div>
                     <script type="text/javascript">
                       function dycheck_start() {
@@ -321,7 +355,7 @@
                       dycheck_stop();
                     </script>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://hangg7.com/dycheck">
                       <papertitle
                         >Monocular Dynamic View Synthesis: A Reality
@@ -348,19 +382,18 @@
                     <a href="https://github.com/KAIR-BAIR/dycheck/">code</a>
                     <p></p>
                     <p>
-                      We show a discrepancy between the practical captures and
-                      the existing experimental protocols in dynamic view
-                      synthesis from monocular video.
+                      We show that existing 4D reconstruction methods are not
+                      working well in-the-wild.
                     </p>
                   </td>
                 </tr>
                 <tr onmouseout="hmp_stop()" onmouseover="hmp_start()">
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="hmp_teaser">
-                        <img src="assets/hmp_after.png" width="160" />
+                        <img src="assets/hmp_after.png" width="100%" />
                       </div>
-                      <img src="assets/hmp_before.png" width="160" />
+                      <img src="assets/hmp_before.png" width="100%" />
                     </div>
                     <script type="text/javascript">
                       function hmp_start() {
@@ -374,7 +407,7 @@
                       hmp_stop();
                     </script>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://zhec.github.io/hmp/">
                       <papertitle
                         >Long-term Human Motion Prediction with Scene
@@ -415,12 +448,12 @@
                   </td>
                 </tr>
                 <tr onmouseout="dk_stop()" onmouseover="dk_start()">
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="dk_teaser">
-                        <img src="assets/dk_after.png" width="160" />
+                        <img src="assets/dk_after.png" width="100%" />
                       </div>
-                      <img src="assets/dk_before.png" width="160" />
+                      <img src="assets/dk_before.png" width="100%" />
                     </div>
                     <script type="text/javascript">
                       function dk_start() {
@@ -434,7 +467,7 @@
                       dk_stop();
                     </script>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://hangg7.com/deformable-kernels/">
                       <papertitle>
                         Deformable Kernels: Adapting Effective Receptive Fields
@@ -466,19 +499,18 @@
                     >
                     <p></p>
                     <p>
-                      By learning an instance-adaptive convolutional operator
-                      through 2D deformation in kernel space, we can adapt the
-                      effective receptive field at runtime.
+                      We propose a new convolutional operator that does
+                      attention in the kernel space.
                     </p>
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
-                      <img src="assets/stag.png" width="160" />
+                      <img src="assets/stag.png" width="100%" />
                     </div>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="http://arxiv.org/abs/1812.01233">
                       <papertitle
                         >Spatio-Temporal Action Graph Networks</papertitle
@@ -506,19 +538,17 @@
                     <a href="http://arxiv.org/abs/1812.01233">arXiv</a>
                     <p></p>
                     <p>
-                      We model video as a spatial-temporal relational graph for
-                      action recognition and find that the second order affinity
-                      (affinity between edges) is surprisingly helpful.
+                      We find relational graph useful for action recognition.
                     </p>
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
-                      <img src="assets/dpg.png" width="160" />
+                      <img src="assets/dpg.png" width="100%" />
                     </div>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://arxiv.org/abs/1812.00452">
                       <papertitle>
                         Disentangling Propagation and Generation for Video
@@ -545,18 +575,18 @@
                     <a href="https://arxiv.org/abs/1812.00452">arXiv</a>
                     <p></p>
                     <p>
-                      High fidelity video prediction is easier if we disentangle
-                      the flow propagation from frame generation.
+                      We make a system that propagates seen parts and generates
+                      unseen ones.
                     </p>
                   </td>
                 </tr>
                 <tr onmouseout="covgan_stop()" onmouseover="covgan_start()">
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="covgan_teaser">
-                        <img src="assets/covgan_after.png" width="160" />
+                        <img src="assets/covgan_after.png" width="100%" />
                       </div>
-                      <img src="assets/covgan_before.png" width="160" />
+                      <img src="assets/covgan_before.png" width="100%" />
                     </div>
                     <script type="text/javascript">
                       function covgan_start() {
@@ -570,7 +600,7 @@
                       covgan_stop();
                     </script>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://arxiv.org/abs/1810.11730">
                       <papertitle>
                         Low-shot Learning via Covariance-Preserving Adversarial
@@ -596,18 +626,17 @@
                     <a href="https://arxiv.org/abs/1810.11730">arXiv</a>
                     <p></p>
                     <p>
-                      We use learned feature augmentation to train low-shot
-                      classifiers.
+                      We learn feature augmentation for low-shot classifiers.
                     </p>
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
-                      <img src="assets/autoloc.png" width="160" />
+                      <img src="assets/autoloc.png" width="100%" />
                     </div>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://arxiv.org/abs/1807.08333">
                       <papertitle>
                         AutoLoc: Weakly-supervised Temporal Action Localization
@@ -634,18 +663,17 @@
                     <p></p>
                     <p>
                       We propose a weakly-supervised method for temporal action
-                      localization by maximizing the difference inside and
-                      outside the localization box.
+                      localization.
                     </p>
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
-                      <img src="assets/er.png" width="160" />
+                      <img src="assets/er.png" width="100%" />
                     </div>
                   </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
                     <a href="https://ieeexplore.ieee.org/document/8057022">
                       <papertitle>
                         ER: Early Recognition of Inattentive Driving Events
@@ -676,19 +704,22 @@
                     >
                     <p></p>
                     <p>
-                      We developed a audio-based early recognition system for
-                      inattentive driving events through Doppler effect.
+                      We build an audio-based mobile app for inattentive driving
+                      detection.
                     </p>
                   </td>
                 </tr>
               </tbody>
             </table>
             <table
-              width="100%"
-              align="center"
-              border="0"
-              cellspacing="0"
-              cellpadding="20"
+              style="
+                width: 100%;
+                height: auto;
+                align: center;
+                border: 0px;
+                cell-spacing: 0px;
+                cell-padding: 2.5%;
+              "
             >
               <tr>
                 <td>
