@@ -152,6 +152,89 @@
               "
             >
               <tbody>
+                <tr onmouseout="seva_stop()" onmouseover="seva_start()">
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
+                    <div class="one" style="border: 2px solid #000">
+                      <div class="two" id="seva_teaser">
+                        <video width="100%" muted autoplay loop>
+                          <source
+                            src="assets/seva_after.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src="assets/seva_before.jpg" width="100%" />
+                    </div>
+                    <script type="text/javascript">
+                      function seva_start() {
+                        document.getElementById("seva_teaser").style.opacity =
+                          "1";
+                      }
+                      function seva_stop() {
+                        document.getElementById("seva_teaser").style.opacity =
+                          "0";
+                      }
+                      seva_stop();
+                    </script>
+                  </td>
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                    <a href="https://seva-avatar.github.io/">
+                      <papertitle
+                        >Stable Virtual Camera: Generative View Synthesis with
+                        Diffusion Models
+                      </papertitle>
+                    </a>
+                    <br />
+                    <a href="https://shallowtoil.github.io/"
+                      >Jensen (Jinghao) Zhou*</a
+                    >, <strong>Hang Gao*</strong>,
+                    <a href="https://voletiv.github.io/">Vikram Voleti</a>,
+                    <a href="https://www.aaryaman.net/">Aaryaman Vasishta</a>,
+                    <a href="https://voletiv.github.io/">Vikram Voleti</a>,
+                    <a href="https://chhankyao.github.io/">Chun-Han Yao</a>,
+                    <a href="https://markboss.me/">Mark Boss</a>,
+                    <a href="https://eng.ox.ac.uk/people/philip-torr/"
+                      >Philip Torr</a
+                    >,
+                    <a href="https://chrirupp.github.io/"
+                      >Christrian Rupprecht</a
+                    >,
+                    <a href="https://varunjampani.github.io/">Varun Jampani</a>
+                    <br />
+                    <em>arXiv</em>, 2025
+                    <br />
+                    <a href="https://stable-virtual-camera.github.io/"
+                      >project page</a
+                    >
+                    /
+                    <a
+                      href="https://stable-virtual-camera.github.io/pdf/paper.pdf"
+                      >arXiv</a
+                    >
+                    /
+                    <a
+                      href="https://github.com/Stability-AI/stable-virtual-camera"
+                      >code</a
+                    >
+                    /
+                    <a
+                      href="https://huggingface.co/spaces/stabilityai/stable-virtual-camera"
+                      >demo</a
+                    >
+                    /
+                    <a
+                      href="https://stability.ai/news/introducing-stable-virtual-camera-multi-view-video-generation-with-3d-camera-control"
+                      >company blog</a
+                    >
+                    <p></p>
+                    <p>
+                      We introduce Stable Virtual Camera, a generalist
+                      multi-view diffusion model for novel view synthesis in
+                      open, real-world settings.
+                    </p>
+                  </td>
+                </tr>
                 <tr onmouseout="soar_stop()" onmouseover="soar_start()">
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
