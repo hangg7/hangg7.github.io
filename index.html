@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link
       rel="stylesheet"
@@ -79,35 +79,31 @@
                     <name>Hang Gao</name>
                   </p>
                   <p>
-                    I am a final-year Ph.D. at
-                    <a
-                      href="https://www.berkeley.edu/"
-                      style="white-space: nowrap"
-                      >UC Berkeley</a
-                    >, advised by
+                    I am joining as a member of technical staff at
+                    <a href="https://x.ai/xAI">xAI</a>, working on multimodal
+                    and deep generative models.
+                  </p>
+                  <p>
+                    Recently, I finished my PhD at UC Berkeley advised by
                     <a href="https://people.eecs.berkeley.edu/~kanazawa/">
                       Angjoo Kanazawa</a
-                    >. My works revolve around deep generative models and neural
-                    rendering.
-                  </p>
-                  <p>
-                    I studied at Jiao Tong University and Columbia. I have spent
-                    time working as a student researcher at Stability, Adobe and
-                    Microsoft.
-                  </p>
-                  <p>
-                    <b>I am on the industrial job market this spring (2025).</b>
+                    >. Before that, I studied at Jiao Tong University and
+                    Columbia. I have also worked as a student researcher at
+                    Stability, Adobe and Microsoft.
                   </p>
                   <p style="text-align: right">
-                    <a href="mailto:hangg@berkeley.edu"
-                      ><i class="fa-solid fa-envelope fa-xl"></i
+                    <a href="https://x.com/hangg70"
+                      ><i class="fa-brands fa-x-twitter fa-xl"></i
+                    ></a>
+                    <a href="https://github.com/hangg7/"
+                      ><i class="fa-brands fa-github fa-xl"></i
                     ></a>
                     <a
                       href="https://scholar.google.com/citations?hl=en&user=IAxkUQkAAAAJ"
                       ><i class="ai ai-google-scholar fa-xl"></i
                     ></a>
-                    <a href="https://github.com/hangg7/"
-                      ><i class="fa-brands fa-github fa-xl"></i
+                    <a href="mailto:hangg.sv7@gmail.com"
+                      ><i class="fa-solid fa-envelope fa-xl"></i
                     ></a>
                   </p>
                 </td>
@@ -130,11 +126,26 @@
                     style="padding: 2.5%; width: 100%; vertical-align: middle"
                   >
                     <heading>Research</heading>
+                    <span style="font-size: 0.9em; margin-left: 10px">
+                      <a
+                        href="#"
+                        onclick="toggleView(); return false;"
+                        style="
+                          text-decoration: none;
+                          color: #000;
+                          border-bottom: 1px dotted #000;
+                        "
+                        onmouseover="this.style.borderBottom='1px solid #000'"
+                        onmouseout="this.style.borderBottom='1px dotted #000'"
+                        ><i class="fa-solid fa-check-double"></i>
+                        <span id="viewToggle">toggle all</span></a
+                      >
+                    </span>
                     <p>
-                      I work on novel view synthesis in real-world settings. My
-                      goal is to make such camera-controled view generation
-                      high-quality, efficient, and available at scale. I am
-                      currently interested in diffusion models.
+                      I am broadly interested in deep generative models for
+                      world modeling. In the past, I have explored building
+                      generalist systems that scale view synthesis to real-world
+                      settings.
                     </p>
                   </td>
                 </tr>
@@ -152,7 +163,11 @@
               "
             >
               <tbody>
-                <tr onmouseout="seva_stop()" onmouseover="seva_start()">
+                <tr
+                  onmouseout="seva_stop()"
+                  onmouseover="seva_start()"
+                  class="paper-row selected"
+                >
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="seva_teaser">
@@ -191,7 +206,6 @@
                     >, <strong>Hang Gao*</strong>,
                     <a href="https://voletiv.github.io/">Vikram Voleti</a>,
                     <a href="https://www.aaryaman.net/">Aaryaman Vasishta</a>,
-                    <a href="https://voletiv.github.io/">Vikram Voleti</a>,
                     <a href="https://chhankyao.github.io/">Chun-Han Yao</a>,
                     <a href="https://markboss.me/">Mark Boss</a>,
                     <a href="https://eng.ox.ac.uk/people/philip-torr/"
@@ -222,17 +236,20 @@
                     /
                     <a
                       href="https://stability.ai/news/introducing-stable-virtual-camera-multi-view-video-generation-with-3d-camera-control"
-                      >company blog</a
+                      >blog</a
                     >
                     <p></p>
                     <p>
-                      We introduce Stable Virtual Camera, a generalist
-                      multi-view diffusion model for novel view synthesis in
-                      open, real-world settings.
+                      We build a generalist multi-view diffusion model for view
+                      synthesis in open, real-world settings.
                     </p>
                   </td>
                 </tr>
-                <tr onmouseout="soar_stop()" onmouseover="soar_start()">
+                <tr
+                  onmouseout="soar_stop()"
+                  onmouseover="soar_start()"
+                  class="paper-row"
+                >
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="soar_teaser">
@@ -286,7 +303,11 @@
                     </p>
                   </td>
                 </tr>
-                <tr onmouseout="som_stop()" onmouseover="som_start()">
+                <tr
+                  onmouseout="som_stop()"
+                  onmouseover="som_start()"
+                  class="paper-row selected"
+                >
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="som_teaser">
@@ -346,11 +367,15 @@
                     <p></p>
                     <p>
                       We propose a method for joint 4D reconstruction and 3D
-                      tracking that works reasonably well in-the-wild.
+                      tracking on internet footages.
                     </p>
                   </td>
                 </tr>
-                <tr onmouseout="nerfacc_stop()" onmouseover="nerfacc_start()">
+                <tr
+                  onmouseout="nerfacc_stop()"
+                  onmouseover="nerfacc_start()"
+                  class="paper-row"
+                >
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="nerfacc_teaser">
@@ -407,7 +432,11 @@
                     </p>
                   </td>
                 </tr>
-                <tr onmouseout="dycheck_stop()" onmouseover="dycheck_start()">
+                <tr
+                  onmouseout="dycheck_stop()"
+                  onmouseover="dycheck_start()"
+                  class="paper-row selected"
+                >
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="dycheck_teaser">
@@ -462,12 +491,16 @@
                     <a href="https://github.com/KAIR-BAIR/dycheck/">code</a>
                     <p></p>
                     <p>
-                      We show that existing 4D reconstruction methods are not
-                      working well in-the-wild.
+                      We systematically show why and how existing 4D
+                      reconstruction methods don't work well in the wild.
                     </p>
                   </td>
                 </tr>
-                <tr onmouseout="hmp_stop()" onmouseover="hmp_start()">
+                <tr
+                  onmouseout="hmp_stop()"
+                  onmouseover="hmp_start()"
+                  class="paper-row"
+                >
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="hmp_teaser">
@@ -527,7 +560,11 @@
                     </p>
                   </td>
                 </tr>
-                <tr onmouseout="dk_stop()" onmouseover="dk_start()">
+                <tr
+                  onmouseout="dk_stop()"
+                  onmouseover="dk_start()"
+                  class="paper-row"
+                >
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="dk_teaser">
@@ -584,7 +621,7 @@
                     </p>
                   </td>
                 </tr>
-                <tr>
+                <tr class="paper-row">
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <img src="assets/stag.png" width="100%" />
@@ -622,7 +659,7 @@
                     </p>
                   </td>
                 </tr>
-                <tr>
+                <tr class="paper-row">
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <img src="assets/dpg.png" width="100%" />
@@ -660,7 +697,11 @@
                     </p>
                   </td>
                 </tr>
-                <tr onmouseout="covgan_stop()" onmouseover="covgan_start()">
+                <tr
+                  onmouseout="covgan_stop()"
+                  onmouseover="covgan_start()"
+                  class="paper-row"
+                >
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <div class="two" id="covgan_teaser">
@@ -710,7 +751,7 @@
                     </p>
                   </td>
                 </tr>
-                <tr>
+                <tr class="paper-row">
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <img src="assets/autoloc.png" width="100%" />
@@ -747,7 +788,7 @@
                     </p>
                   </td>
                 </tr>
-                <tr>
+                <tr class="paper-row">
                   <td style="padding: 16px; width: 20%; vertical-align: middle">
                     <div class="one" style="border: 2px solid #000">
                       <img src="assets/er.png" width="100%" />
@@ -809,7 +850,7 @@
                       Thanks
                       <a href="https://jonbarron.info">Jon</a>!
                       <br />
-                      Last updated March 2025.
+                      Last updated June 2025.
                     </font>
                   </p>
                 </td>
@@ -819,5 +860,34 @@
         </tr>
       </tbody>
     </table>
+    <script>
+      let showSelected = true;
+
+      function toggleView() {
+        showSelected = !showSelected;
+        document.getElementById("viewToggle").textContent = showSelected
+          ? "toggle all"
+          : "toggle selected";
+        updatePaperVisibility();
+      }
+
+      function updatePaperVisibility() {
+        const papers = document.getElementsByClassName("paper-row");
+        for (let paper of papers) {
+          if (showSelected) {
+            paper.style.display = paper.classList.contains("selected")
+              ? ""
+              : "none";
+          } else {
+            paper.style.display = "";
+          }
+        }
+      }
+
+      // Initialize visibility
+      document.addEventListener("DOMContentLoaded", function () {
+        updatePaperVisibility();
+      });
+    </script>
   </body>
 </html>

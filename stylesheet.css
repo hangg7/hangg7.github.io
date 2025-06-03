@@ -1,3 +1,7 @@
+:root {
+  --main-font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+}
+
 a {
   color: #2c5fb6;
   text-decoration: none;
@@ -15,29 +19,29 @@ th,
 tr,
 p,
 a {
-  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-family: var(--main-font-family);
   font-size: 14px;
 }
 
 strong {
-  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-family: var(--main-font-family);
   font-size: 14px;
 }
 
 heading {
-  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-family: var(--main-font-family);
   font-size: 22px;
   font-weight: 600;
 }
 
 papertitle {
-  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-family: var(--main-font-family);
   font-size: 14px;
   font-weight: 600;
 }
 
 name {
-  font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-family: var(--main-font-family);
   font-size: 32px;
   font-weight: 700;
 }
