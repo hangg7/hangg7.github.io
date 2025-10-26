@@ -81,15 +81,14 @@
                   <p>
                     I am a member of technical staff at
                     <a href="https://x.ai/xAI">xAI</a>, working on multimodal
-                    and deep generative models.
+                    generative models.
                   </p>
                   <p>
-                    Recently, I finished my PhD at UC Berkeley advised by
+                    I did my PhD at UC Berkeley advised by
                     <a href="https://people.eecs.berkeley.edu/~kanazawa/">
                       Angjoo Kanazawa</a
                     >. Before that, I studied at Jiao Tong University and
-                    Columbia. I have also worked as a student researcher at
-                    Stability, Adobe and Microsoft.
+                    Columbia.
                   </p>
                   <p style="text-align: right">
                     <a href="https://x.com/hangg70"
@@ -125,7 +124,7 @@
                   <td
                     style="padding: 2.5%; width: 100%; vertical-align: middle"
                   >
-                    <heading>Research</heading>
+                    <heading>Past projects</heading>
                     <span style="font-size: 0.9em; margin-left: 10px">
                       <a
                         href="#"
@@ -138,15 +137,9 @@
                         onmouseover="this.style.borderBottom='1px solid #000'"
                         onmouseout="this.style.borderBottom='1px dotted #000'"
                         ><i class="fa-solid fa-check-double"></i>
-                        <span id="viewToggle">toggle all</span></a
+                        <span id="viewToggle">selected → all</span></a
                       >
                     </span>
-                    <p>
-                      I am broadly interested in deep generative models for
-                      world modeling. In the past, I have explored building
-                      generalist systems that scale view synthesis to real-world
-                      settings.
-                    </p>
                   </td>
                 </tr>
               </tbody>
@@ -163,6 +156,58 @@
               "
             >
               <tbody>
+                <tr
+                  onmouseout="grok_imagine_09_stop()"
+                  onmouseover="grok_imagine_09_start()"
+                  class="paper-row selected"
+                >
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
+                    <div class="one" style="border: 2px solid #000">
+                      <div class="two" id="grok_imagine_09_teaser">
+                        <video width="100%" muted autoplay loop>
+                          <source
+                            src="assets/grok_imagine_09_after.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img
+                        src="assets/grok_imagine_09_before.jpg"
+                        width="100%"
+                      />
+                    </div>
+                    <script type="text/javascript">
+                      function grok_imagine_09_start() {
+                        document.getElementById(
+                          "grok_imagine_09_teaser",
+                        ).style.opacity = "1";
+                      }
+                      function grok_imagine_09_stop() {
+                        document.getElementById(
+                          "grok_imagine_09_teaser",
+                        ).style.opacity = "0";
+                      }
+                      grok_imagine_09_stop();
+                    </script>
+                  </td>
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                    <a href="https://grok.com/imagine">
+                      <papertitle>Grok Imagine 0.9</papertitle>
+                    </a>
+                    <br />
+                    Imagine team at xAI,
+                    <strong>worked on post-training, data and eval</strong>
+                    <br />
+                    <em>Product Release</em>, 2025
+                    <br />
+                    <p></p>
+                    <p>
+                      We made and rolled out Grok's first generation of video
+                      models in 3 months from scratch.
+                    </p>
+                  </td>
+                </tr>
                 <tr
                   onmouseout="seva_stop()"
                   onmouseover="seva_start()"
@@ -216,7 +261,7 @@
                     >,
                     <a href="https://varunjampani.github.io/">Varun Jampani</a>
                     <br />
-                    <em>arXiv</em>, 2025
+                    <em>ICCV</em>, 2025
                     <br />
                     <a href="https://stable-virtual-camera.github.io/"
                       >project page</a
@@ -240,8 +285,8 @@
                     >
                     <p></p>
                     <p>
-                      We build a generalist multi-view diffusion model for view
-                      synthesis in open, real-world settings.
+                      We build a multi-view diffusion model for view synthesis
+                      from as few as a single image.
                     </p>
                   </td>
                 </tr>
@@ -355,7 +400,8 @@
                       >Angjoo Kanazawa</a
                     >
                     <br />
-                    <em>arXiv</em>, 2024
+                    <em>ICCV</em>, 2025 &nbsp
+                    <font color="red"><strong>(Spotlight)</strong></font>
                     <br />
                     <a href="https://shape-of-motion.github.io/"
                       >project page</a
@@ -850,7 +896,7 @@
                       Thanks
                       <a href="https://jonbarron.info">Jon</a>!
                       <br />
-                      Last updated June 2025.
+                      Last updated October 2025.
                     </font>
                   </p>
                 </td>
@@ -866,8 +912,8 @@
       function toggleView() {
         showSelected = !showSelected;
         document.getElementById("viewToggle").textContent = showSelected
-          ? "toggle all"
-          : "toggle selected";
+          ? "selected → all"
+          : "all → selected";
         updatePaperVisibility();
       }
 
