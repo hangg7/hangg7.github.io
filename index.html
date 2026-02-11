@@ -89,15 +89,26 @@
                       display: flex;
                       align-items: center;
                       flex-wrap: wrap;
+                      max-width: 100%;
+                      overflow: hidden;
+                      min-height: 56px;
                     "
                   >
                     <name>Hang Gao</name>
                     <img
                       src="assets/name.png"
-                      style="height: 56px; margin-left: 20px"
+                      style="
+                        height: 56px;
+                        margin-left: 2vw;
+                        flex-shrink: 1;
+                        min-width: 0;
+                      "
                       alt="高杭"
                     />
-                    <span class="social-icons" style="margin-left: auto">
+                    <span
+                      class="social-icons"
+                      style="margin-left: auto; flex-shrink: 0"
+                    >
                       <a href="https://x.com/hangg70"
                         ><i class="fa-brands fa-x-twitter fa-xl"></i
                       ></a>

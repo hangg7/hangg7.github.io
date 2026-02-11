@@ -45,6 +45,7 @@ name {
   font-family: var(--main-font-family);
   font-size: 28px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .one {
@@ -95,8 +96,8 @@ span.highlight {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
+    padding: 4px 2.5% !important;
+    box-sizing: border-box !important;
   }
 
   .one {
@@ -126,11 +127,21 @@ span.highlight {
   }
 
   .social-icons {
-    text-align: right !important;
-    padding-right: 10px !important;
+    margin-left: auto !important;
+    flex-shrink: 0;
+  }
+
+  p:has(name) {
+    flex-wrap: nowrap !important;
   }
 
   name {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  p:has(name) > img {
+    display: none !important;
   }
 }
