@@ -126,6 +126,10 @@ span.highlight {
     margin: 0 auto;
   }
 
+  .profile-photo-cell {
+    text-align: center !important;
+  }
+
   .social-icons {
     margin-left: auto !important;
     flex-shrink: 0;
