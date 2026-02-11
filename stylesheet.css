@@ -74,6 +74,12 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+.paper-row td,
+.product-row td {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
 .one video,
 .one img,
 .two video,
@@ -95,6 +101,22 @@ span.highlight {
 
   .one {
     display: none !important;
+  }
+
+  .paper-row td:first-child,
+  .product-row td:first-child {
+    display: none !important;
+  }
+
+  .paper-row td,
+  .product-row td {
+    padding-top: 8px !important;
+    padding-bottom: 0px !important;
+  }
+
+  heading {
+    display: inline-block;
+    margin-top: 16px;
   }
 
   .profile-photo {
