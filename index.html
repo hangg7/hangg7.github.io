@@ -52,36 +52,68 @@
               "
             >
               <tbody>
-                <td style="padding: 2.5%; width: 37%; max-width: 37%">
+                <td style="padding: 2.5%; width: 25%; max-width: 25%">
                   <a href="assets/hang.png"
                     ><img
                       style="
                         width: 100%;
                         max-width: 100%;
-                        border: 2px solid #000;
+                        border: 1.5px solid #000;
                         border-radius: 0%;
                         display: block;
                       "
                       alt="profile photo"
                       src="assets/hang.png"
-                      class="hoverZoomLink"
+                      class="hoverZoomLink profile-photo"
                   /></a>
                 </td>
                 <td
                   style="
                     padding: 2.5%;
-                    width: 63%;
-                    max-width: 63%;
+                    width: 75%;
+                    max-width: 75%;
                     vertical-align: middle;
                   "
                 >
-                  <p style="text-align: center">
+                  <p
+                    style="text-align: left; display: flex; align-items: center; flex-wrap: wrap;"
+                  >
                     <name>Hang Gao</name>
+                    <img
+                      src="assets/name.png"
+                      style="height: 56px; margin-left: 20px"
+                      alt="高杭"
+                    />
+                    <span class="social-icons" style="margin-left: auto;">
+                      <a href="https://x.com/hangg70"
+                        ><i class="fa-brands fa-x-twitter fa-xl"></i
+                      ></a>
+                      <a href="https://github.com/hangg7/"
+                        ><i class="fa-brands fa-github fa-xl"></i
+                      ></a>
+                      <a
+                        href="https://scholar.google.com/citations?hl=en&user=IAxkUQkAAAAJ"
+                        ><i class="ai ai-google-scholar fa-xl"></i
+                      ></a>
+                      <a href="mailto:hangg.sv7@gmail.com"
+                        ><i class="fa-solid fa-envelope fa-xl"></i
+                      ></a>
+                    </span>
                   </p>
                   <p>
-                    I am a member of technical staff at
-                    <a href="https://x.ai/xAI">xAI</a>, working on multimodal
-                    generative models.
+                    I am an individual interested in multimodal intelligence and
+                    its applications.
+                  </p>
+                  <p>
+                    Previously, I was a member of technical staff at
+                    <a href="https://x.ai/xAI">xAI</a>, where I contributed to
+                    <a href="https://x.com/xai/status/1975607901571199086"
+                      >Grok Imagine 0.9</a
+                    >
+                    and
+                    <a href="https://x.ai/news/grok-imagine-api"
+                      >Grok Imagine 1.0</a
+                    >.
                   </p>
                   <p>
                     I did my PhD at UC Berkeley advised by
@@ -90,24 +122,10 @@
                     >. Before that, I studied at Jiao Tong University and
                     Columbia.
                   </p>
-                  <p style="text-align: right">
-                    <a href="https://x.com/hangg70"
-                      ><i class="fa-brands fa-x-twitter fa-xl"></i
-                    ></a>
-                    <a href="https://github.com/hangg7/"
-                      ><i class="fa-brands fa-github fa-xl"></i
-                    ></a>
-                    <a
-                      href="https://scholar.google.com/citations?hl=en&user=IAxkUQkAAAAJ"
-                      ><i class="ai ai-google-scholar fa-xl"></i
-                    ></a>
-                    <a href="mailto:hangg.sv7@gmail.com"
-                      ><i class="fa-solid fa-envelope fa-xl"></i
-                    ></a>
-                  </p>
                 </td>
               </tbody>
             </table>
+            <!-- Product Section -->
             <table
               style="
                 width: 100%;
@@ -124,22 +142,72 @@
                   <td
                     style="padding: 2.5%; width: 100%; vertical-align: middle"
                   >
-                    <heading>Past projects</heading>
-                    <span style="font-size: 0.9em; margin-left: 10px">
-                      <a
-                        href="#"
-                        onclick="toggleView(); return false;"
-                        style="
-                          text-decoration: none;
-                          color: #000;
-                          border-bottom: 1px dotted #000;
-                        "
-                        onmouseover="this.style.borderBottom='1px solid #000'"
-                        onmouseout="this.style.borderBottom='1px dotted #000'"
-                        ><i class="fa-solid fa-check-double"></i>
-                        <span id="viewToggle">selected → all</span></a
-                      >
-                    </span>
+                    <heading>Product</heading>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              style="
+                width: 100%;
+                height: auto;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr
+                  onmouseout="grok_imagine_1_stop()"
+                  onmouseover="grok_imagine_1_start()"
+                >
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
+                      <div class="two" id="grok_imagine_1_teaser">
+                        <video width="100%" muted autoplay loop playsinline>
+                          <source
+                            src="assets/grok_imagine_1_after.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img
+                        src="assets/grok_imagine_1_before.png"
+                        width="100%"
+                      />
+                    </div>
+                    <script type="text/javascript">
+                      function grok_imagine_1_start() {
+                        document.getElementById(
+                          "grok_imagine_1_teaser",
+                        ).style.opacity = "1";
+                      }
+                      function grok_imagine_1_stop() {
+                        document.getElementById(
+                          "grok_imagine_1_teaser",
+                        ).style.opacity = "0";
+                      }
+                      grok_imagine_1_stop();
+                    </script>
+                  </td>
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
+                    <a href="https://x.ai/news/grok-imagine-api">
+                      <papertitle>Grok Imagine 1.0</papertitle>
+                    </a>
+                    <br />
+                    Imagine team at xAI,
+                    <strong>worked on post-training data and eval</strong>
+                    <br />
+                    <em>Public Release</em>, Jan 2026
+                    <br />
+                    <p></p>
+                    <p>
+                      We improved over 0.9 in major aspects and topped
+                      competitive leaderboards.
+                    </p>
                   </td>
                 </tr>
               </tbody>
@@ -159,12 +227,11 @@
                 <tr
                   onmouseout="grok_imagine_09_stop()"
                   onmouseover="grok_imagine_09_start()"
-                  class="paper-row selected"
                 >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <div class="two" id="grok_imagine_09_teaser">
-                        <video width="100%" muted autoplay loop>
+                        <video width="100%" muted autoplay loop playsinline>
                           <source
                             src="assets/grok_imagine_09_after.mp4"
                             type="video/mp4"
@@ -191,21 +258,111 @@
                       grok_imagine_09_stop();
                     </script>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
-                    <a href="https://grok.com/imagine">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
+                    <a href="https://x.com/xai/status/1975607901571199086">
                       <papertitle>Grok Imagine 0.9</papertitle>
                     </a>
                     <br />
                     Imagine team at xAI,
-                    <strong>worked on post-training, data and eval</strong>
+                    <strong>worked on SFT, post-training data and eval</strong>
                     <br />
-                    <em>Product Release</em>, 2025
+                    <em>Public Release</em>, Oct 2025
                     <br />
                     <p></p>
                     <p>
-                      We made and rolled out Grok's first generation of video
-                      models in 3 months from scratch.
+                      We rolled out Grok's first generation of video models in 3
+                      months from scratch.
                     </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Research Section -->
+            <table
+              style="
+                width: 100%;
+                height: auto;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td
+                    style="padding: 2.5%; width: 100%; vertical-align: middle"
+                  >
+                    <heading>Research</heading>
+                    <span style="font-size: 0.9em; margin-left: 10px">
+                      <a
+                        href="#"
+                        onclick="
+                          toggleView();
+                          return false;
+                        "
+                        style="
+                          text-decoration: none;
+                          color: #000;
+                          border-bottom: 1px dotted #000;
+                        "
+                        onmouseover="this.style.borderBottom = '1px solid #000'"
+                        onmouseout="this.style.borderBottom = '1px dotted #000'"
+                        ><i class="fa-solid fa-check-double"></i>
+                        <span id="viewToggle">selected → all</span></a
+                      >
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              style="
+                width: 100%;
+                height: auto;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr class="paper-row">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
+                      <img src="assets/thesis.png" style="height: 100%; width: auto; position: absolute; top: 0; left: 50%; transform: translateX(-50%);" />
+                    </div>
+                  </td>
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
+                    <a
+                      href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/EECS-2025-170.html"
+                    >
+                      <papertitle
+                        >Deep Generative Priors for View Synthesis at
+                        Scale</papertitle
+                      >
+                    </a>
+                    <br />
+                    <strong>Hang Gao</strong>
+                    <br />
+                    <em>PhD Thesis</em>, UC Berkeley 2025
+                    <br />
+                    Advisor:
+                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                      >Angjoo Kanazawa</a
+                    >
+                    <br />
+                    Committee:
+                    <a href="http://people.eecs.berkeley.edu/~malik/"
+                      >Jitendra Malik</a
+                    >,
+                    <a href="https://people.eecs.berkeley.edu/~efros/"
+                      >Alexei Efros</a
+                    >,
+                    <a href="https://shubhtuls.github.io/">Shubham Tulsiani</a>
+                    <p></p>
                   </td>
                 </tr>
                 <tr
@@ -213,10 +370,10 @@
                   onmouseover="seva_start()"
                   class="paper-row selected"
                 >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <div class="two" id="seva_teaser">
-                        <video width="100%" muted autoplay loop>
+                        <video width="100%" muted autoplay loop playsinline>
                           <source
                             src="assets/seva_after.mp4"
                             type="video/mp4"
@@ -238,7 +395,7 @@
                       seva_stop();
                     </script>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://stable-virtual-camera.github.io/">
                       <papertitle
                         >Stable Virtual Camera: Generative View Synthesis with
@@ -281,72 +438,14 @@
                   </td>
                 </tr>
                 <tr
-                  onmouseout="soar_stop()"
-                  onmouseover="soar_start()"
-                  class="paper-row"
-                >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
-                      <div class="two" id="soar_teaser">
-                        <video width="100%" muted autoplay loop>
-                          <source
-                            src="assets/soar_after.mp4"
-                            type="video/mp4"
-                          />
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <img src="assets/soar_before.jpg" width="100%" />
-                    </div>
-                    <script type="text/javascript">
-                      function soar_start() {
-                        document.getElementById("soar_teaser").style.opacity =
-                          "1";
-                      }
-                      function soar_stop() {
-                        document.getElementById("soar_teaser").style.opacity =
-                          "0";
-                      }
-                      soar_stop();
-                    </script>
-                  </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
-                    <a href="https://soar-avatar.github.io/">
-                      <papertitle
-                        >SOAR: Self-Occluded Avatar Recovery from a Single
-                        Video</papertitle
-                      >
-                    </a>
-                    <br />
-                    <a href="https://panzhy.com/">Zhuoyang Pan*</a>,
-                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
-                      >Angjoo Kanazawa</a
-                    >,
-                    <strong>Hang Gao*</strong>
-                    <br />
-                    <em>arXiv</em>, 2024
-                    <br />
-                    <a href="https://soar-avatar.github.io/">project page</a>
-                    /
-                    <a href="https://arxiv.org/abs/2407.13764">arXiv</a>
-                    /
-                    <a href="https://github.com/hangg7/soar">code</a>
-                    <p></p>
-                    <p>
-                      We recover complete human avatars from self-occluded
-                      videos in the wild.
-                    </p>
-                  </td>
-                </tr>
-                <tr
                   onmouseout="som_stop()"
                   onmouseover="som_start()"
                   class="paper-row selected"
                 >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <div class="two" id="som_teaser">
-                        <video width="100%" muted autoplay loop>
+                        <video width="100%" muted autoplay loop playsinline>
                           <source src="assets/som_after.mov" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
@@ -369,7 +468,7 @@
                       som_stop();
                     </script>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://shape-of-motion.github.io/">
                       <papertitle
                         >Shape of Motion: 4D Reconstruction from a Single
@@ -408,14 +507,72 @@
                   </td>
                 </tr>
                 <tr
+                  onmouseout="soar_stop()"
+                  onmouseover="soar_start()"
+                  class="paper-row"
+                >
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
+                      <div class="two" id="soar_teaser">
+                        <video width="100%" muted autoplay loop playsinline>
+                          <source
+                            src="assets/soar_after.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src="assets/soar_before.jpg" width="100%" />
+                    </div>
+                    <script type="text/javascript">
+                      function soar_start() {
+                        document.getElementById("soar_teaser").style.opacity =
+                          "1";
+                      }
+                      function soar_stop() {
+                        document.getElementById("soar_teaser").style.opacity =
+                          "0";
+                      }
+                      soar_stop();
+                    </script>
+                  </td>
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
+                    <a href="https://soar-avatar.github.io/">
+                      <papertitle
+                        >SOAR: Self-Occluded Avatar Recovery from a Single
+                        Video</papertitle
+                      >
+                    </a>
+                    <br />
+                    <a href="https://panzhy.com/">Zhuoyang Pan*</a>,
+                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                      >Angjoo Kanazawa</a
+                    >,
+                    <strong>Hang Gao*</strong>
+                    <br />
+                    <em>arXiv</em>, 2024
+                    <br />
+                    <a href="https://soar-avatar.github.io/">project page</a>
+                    /
+                    <a href="https://arxiv.org/abs/2407.13764">arXiv</a>
+                    /
+                    <a href="https://github.com/hangg7/soar">code</a>
+                    <p></p>
+                    <p>
+                      We recover complete human avatars from self-occluded
+                      videos in the wild.
+                    </p>
+                  </td>
+                </tr>
+                <tr
                   onmouseout="nerfacc_stop()"
                   onmouseover="nerfacc_start()"
                   class="paper-row"
                 >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <div class="two" id="nerfacc_teaser">
-                        <video width="100%" muted autoplay loop>
+                        <video width="100%" muted autoplay loop playsinline>
                           <source
                             src="assets/nerfacc_after.mp4"
                             type="video/mp4"
@@ -439,7 +596,7 @@
                       nerfacc_stop();
                     </script>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://www.nerfacc.com/">
                       <papertitle
                         >NerfAcc: Efficient Sampling Accelerates
@@ -473,10 +630,10 @@
                   onmouseover="dycheck_start()"
                   class="paper-row selected"
                 >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <div class="two" id="dycheck_teaser">
-                        <video width="100%" muted autoplay loop>
+                        <video width="100%" muted autoplay loop playsinline>
                           <source
                             src="assets/dycheck_after.mp4"
                             type="video/mp4"
@@ -500,7 +657,7 @@
                       dycheck_stop();
                     </script>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://hangg7.com/dycheck">
                       <papertitle
                         >Monocular Dynamic View Synthesis: A Reality
@@ -535,8 +692,8 @@
                   onmouseover="hmp_start()"
                   class="paper-row"
                 >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <div class="two" id="hmp_teaser">
                         <img src="assets/hmp_after.png" width="100%" />
                       </div>
@@ -554,7 +711,7 @@
                       hmp_stop();
                     </script>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://zhec.github.io/hmp/">
                       <papertitle
                         >Long-term Human Motion Prediction with Scene
@@ -597,8 +754,8 @@
                   onmouseover="dk_start()"
                   class="paper-row"
                 >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <div class="two" id="dk_teaser">
                         <img src="assets/dk_after.png" width="100%" />
                       </div>
@@ -616,7 +773,7 @@
                       dk_stop();
                     </script>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://hangg7.com/deformable-kernels/">
                       <papertitle>
                         Deformable Kernels: Adapting Effective Receptive Fields
@@ -654,12 +811,12 @@
                   </td>
                 </tr>
                 <tr class="paper-row">
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <img src="assets/stag.png" width="100%" />
                     </div>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="http://arxiv.org/abs/1812.01233">
                       <papertitle
                         >Spatio-Temporal Action Graph Networks</papertitle
@@ -692,12 +849,12 @@
                   </td>
                 </tr>
                 <tr class="paper-row">
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <img src="assets/dpg.png" width="100%" />
                     </div>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://arxiv.org/abs/1812.00452">
                       <papertitle>
                         Disentangling Propagation and Generation for Video
@@ -734,8 +891,8 @@
                   onmouseover="covgan_start()"
                   class="paper-row"
                 >
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <div class="two" id="covgan_teaser">
                         <img src="assets/covgan_after.png" width="100%" />
                       </div>
@@ -753,7 +910,7 @@
                       covgan_stop();
                     </script>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://arxiv.org/abs/1810.11730">
                       <papertitle>
                         Low-shot Learning via Covariance-Preserving Adversarial
@@ -784,12 +941,12 @@
                   </td>
                 </tr>
                 <tr class="paper-row">
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <img src="assets/autoloc.png" width="100%" />
                     </div>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://arxiv.org/abs/1807.08333">
                       <papertitle>
                         AutoLoc: Weakly-supervised Temporal Action Localization
@@ -821,12 +978,12 @@
                   </td>
                 </tr>
                 <tr class="paper-row">
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <div class="one" style="border: 2px solid #000">
+                  <td style="padding: 2.5%; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
                       <img src="assets/er.png" width="100%" />
                     </div>
                   </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                  <td style="padding: 2.5%; width: 75%; vertical-align: middle">
                     <a href="https://ieeexplore.ieee.org/document/8057022">
                       <papertitle>
                         ER: Early Recognition of Inattentive Driving Events
