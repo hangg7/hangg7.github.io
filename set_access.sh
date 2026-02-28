@@ -14,12 +14,10 @@ chmod -R 755 assets
 chmod 744 index.html
 
 # Private but accessable at the end node
-chmod -R 755 projects
-chmod 701 projects
+chmod -R 755 deformable-kernels dycheck eva
+chmod 701 deformable-kernels dycheck eva
 
 chmod -R 755 private
 chmod 701 private
 
-chmod -R 755 misc
-chmod 701 misc
-chmod og-x misc/eva/rose.js misc/eva/styles.css
+chmod og-x eva/rose.js eva/styles.css
