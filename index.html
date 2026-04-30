@@ -88,6 +88,7 @@
                     <name>Hang Gao</name>
                     <img
                       src="assets/name.png"
+                      class="cn-name"
                       style="
                         height: 56px;
                         margin-left: 2vw;
@@ -160,7 +161,11 @@
               <tbody>
                 <tr>
                   <td
-                    style="padding: 20px; width: 100%; vertical-align: middle"
+                    style="
+                      padding: 44px 20px 20px;
+                      width: 100%;
+                      vertical-align: middle;
+                    "
                   >
                     <heading>Product</heading>
                   </td>
@@ -300,26 +305,34 @@
               <tbody>
                 <tr>
                   <td
-                    style="padding: 20px; width: 100%; vertical-align: middle"
+                    style="
+                      padding: 58px 20px 20px;
+                      width: 100%;
+                      vertical-align: middle;
+                    "
                   >
                     <heading>Research</heading>
-                    <span style="font-size: 0.9em; margin-left: 10px">
-                      <a
-                        href="#"
-                        onclick="
-                          toggleView();
-                          return false;
-                        "
-                        style="
-                          text-decoration: none;
-                          color: #000;
-                          border-bottom: 1px dotted #000;
-                        "
-                        onmouseover="this.style.borderBottom = '1px solid #000'"
-                        onmouseout="this.style.borderBottom = '1px dotted #000'"
-                        ><i class="fa-solid fa-check-double"></i>
-                        <span id="viewToggle">selected → all</span></a
+                    <span
+                      class="paper-toggle"
+                      role="group"
+                      aria-label="Filter papers"
+                    >
+                      <button
+                        type="button"
+                        class="paper-toggle-btn active"
+                        data-mode="selected"
+                        onclick="setMode('selected')"
                       >
+                        selected
+                      </button>
+                      <button
+                        type="button"
+                        class="paper-toggle-btn"
+                        data-mode="all"
+                        onclick="setMode('all')"
+                      >
+                        all
+                      </button>
                     </span>
                   </td>
                 </tr>
@@ -1070,11 +1083,11 @@
     <script>
       let showSelected = true;
 
-      function toggleView() {
-        showSelected = !showSelected;
-        document.getElementById("viewToggle").textContent = showSelected
-          ? "selected → all"
-          : "all → selected";
+      function setMode(mode) {
+        showSelected = mode === "selected";
+        document.querySelectorAll(".paper-toggle-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.mode === mode);
+        });
         updatePaperVisibility();
       }
 
