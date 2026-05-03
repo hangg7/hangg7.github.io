@@ -91,8 +91,19 @@ span.highlight {
   object-position: center;
 }
 
-img.cn-name {
-  mix-blend-mode: multiply;
+@font-face {
+  font-family: "TsangerJinKai";
+  src: url("assets/fonts/TsangerJinKai-honggang.woff2") format("woff2");
+  unicode-range: U+9AD8, U+676D;
+  font-display: swap;
+}
+
+.cn-name {
+  font-family: "TsangerJinKai", "PingFang SC", "Hiragino Sans GB", var(--main-font-family);
+  font-size: 30px;
+  font-weight: 500;
+  margin-left: 2vw;
+  white-space: nowrap;
 }
 
 .paper-toggle {
@@ -196,7 +207,7 @@ img.cn-name {
 }
 
 @media screen and (max-width: 380px) {
-  p:has(name) > img {
+  p:has(name) > .cn-name {
     display: none !important;
   }
 }
