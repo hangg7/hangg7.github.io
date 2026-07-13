@@ -20,24 +20,24 @@ tr,
 p,
 a {
   font-family: var(--main-font-family);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 strong {
   font-family: var(--main-font-family);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
 }
 
 heading {
   font-family: var(--main-font-family);
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 500;
 }
 
 papertitle {
   font-family: var(--main-font-family);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -66,21 +66,21 @@ papertitle {
 
 name {
   font-family: var(--main-font-family);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   position: relative;
   overflow: hidden;
 }
 
 .two {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   position: absolute;
   transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
@@ -100,8 +100,8 @@ span.highlight {
 
 .paper-row td,
 .product-row td {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
 }
 
 .one video,
@@ -125,7 +125,7 @@ span.highlight {
 .cn-name {
   font-family:
     "TsangerJinKai", "PingFang SC", "Hiragino Sans GB", var(--main-font-family);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 500;
   margin-left: 2vw;
   white-space: nowrap;
@@ -152,7 +152,7 @@ span.highlight {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.55);
   font-family: var(--main-font-family);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.02em;
