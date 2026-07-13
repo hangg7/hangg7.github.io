@@ -66,7 +66,7 @@ papertitle {
 
 name {
   font-family: var(--main-font-family);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -125,7 +125,7 @@ span.highlight {
 .cn-name {
   font-family:
     "TsangerJinKai", "PingFang SC", "Hiragino Sans GB", var(--main-font-family);
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
   margin-left: 2vw;
   white-space: nowrap;
@@ -183,7 +183,7 @@ span.highlight {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 4px 2.5% !important;
+    padding: 12px 2.5% !important;
     box-sizing: border-box !important;
   }
 
@@ -198,13 +198,17 @@ span.highlight {
 
   .paper-row td,
   .product-row td {
-    padding-top: 8px !important;
+    padding-top: 12px !important;
     padding-bottom: 0px !important;
   }
 
   heading {
     display: inline-block;
     margin-top: 16px;
+  }
+
+  td > p:last-child {
+    margin-bottom: 0;
   }
 
   .profile-photo {
@@ -223,11 +227,7 @@ span.highlight {
   }
 
   p:has(name) {
-    flex-wrap: nowrap !important;
-  }
-
-  name {
-    font-size: 24px;
+    flex-wrap: wrap !important;
   }
 }
 
