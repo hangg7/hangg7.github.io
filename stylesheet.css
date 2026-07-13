@@ -125,7 +125,7 @@ span.highlight {
 .cn-name {
   font-family:
     "TsangerJinKai", "PingFang SC", "Hiragino Sans GB", var(--main-font-family);
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 500;
   margin-left: 2vw;
   white-space: nowrap;
