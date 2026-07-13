@@ -60,7 +60,7 @@
                     padding-top: 30px;
                   "
                 >
-                  <a href="assets/hang.png"
+                  <a href="assets/hang.png" id="profile_photo_link"
                     ><img
                       style="
                         width: 160px;
@@ -70,8 +70,35 @@
                       "
                       alt="profile photo"
                       src="assets/hang.png"
+                      id="profile_photo"
                       class="hoverZoomLink profile-photo"
                   /></a>
+                  <script type="text/javascript">
+                    // Weighted random profile photo. Weights are relative;
+                    // they get normalized automatically (2 + 1 -> 2/3, 1/3).
+                    var profilePhotos = [
+                      ["assets/hang_2024.png", 3],
+                      ["assets/hang_2026.jpg", 1],
+                      ["assets/hang_2024_edit.png", 1],
+                    ];
+                    (function () {
+                      var total = 0;
+                      for (var i = 0; i < profilePhotos.length; i++) {
+                        total += profilePhotos[i][1];
+                      }
+                      var r = Math.random() * total;
+                      var pick = profilePhotos[0][0];
+                      for (var i = 0; i < profilePhotos.length; i++) {
+                        r -= profilePhotos[i][1];
+                        if (r <= 0) {
+                          pick = profilePhotos[i][0];
+                          break;
+                        }
+                      }
+                      document.getElementById("profile_photo").src = pick;
+                      document.getElementById("profile_photo_link").href = pick;
+                    })();
+                  </script>
                 </td>
                 <td style="padding: 20px 20px 0 20px; vertical-align: middle">
                   <p
@@ -107,18 +134,15 @@
                     </span>
                   </p>
                   <p>
-                    Hello! I am an individual interested in multimodal
-                    intelligence and its applications.
+                    Hello! I am an individual interested in science and art.
+                    These days, I like to think about how multimodal AI can
+                    help people express and communicate.
                   </p>
                   <p>
                     I am currently at
                     <a href="https://reve.com/">Reve</a>, focusing on multimodal
-                    pretraining, system, and scaling.
-                  </p>
-                  <p>
-                    Previously, I was a member of technical staff at xAI, where
-                    I contributed to
-                    <a href="https://grok.com/imagine">Grok Imagine Video</a>.
+                    scaling and systems. Previously, I was a member of technical
+                    staff at xAI, where I helped train Grok's video model.
                   </p>
                   <p>
                     I did my PhD at UC Berkeley advised by
@@ -126,6 +150,15 @@
                       Angjoo Kanazawa</a
                     >. Before that, I studied at Jiao Tong University and
                     Columbia.
+                  </p>
+                  <p>
+                    I <a href="https://blog.hangg7.com/">write</a> sometimes.
+                  </p>
+                  <p>
+                    I'd love to hear your
+                    <a href="https://www.admonymous.co/hangg"
+                      >anonymous feedback</a
+                    >.
                   </p>
                 </td>
               </tbody>
@@ -168,6 +201,28 @@
               "
             >
               <tbody>
+                <tr class="product-row">
+                  <td style="padding: 20px; width: 25%; vertical-align: middle">
+                    <div class="one" style="border: 1.5px solid #000">
+                      <img src="assets/reve.webp" width="100%" />
+                    </div>
+                  </td>
+                  <td style="padding: 20px; width: 75%; vertical-align: middle">
+                    <a href="https://reve.com/">
+                      <papertitle>Reve</papertitle>
+                    </a>
+                    <br />
+                    Research at Reve,
+                    <strong>pretraining</strong>
+                    <br />
+                    <a href="https://blog.reve.com/posts/launching-reve-2.1/"
+                      >v2.1</a
+                    >, July 2026 /
+                    <a href="https://blog.reve.com/posts/announcing-reve-2.0/"
+                      >v2</a
+                    >, June 2026
+                  </td>
+                </tr>
                 <tr
                   class="product-row"
                   onmouseout="grok_imagine_1_stop()"
@@ -204,72 +259,23 @@
                     </script>
                   </td>
                   <td style="padding: 20px; width: 75%; vertical-align: middle">
-                    <a href="https://x.ai/news/grok-imagine-api">
-                      <papertitle>Grok Imagine 1.0</papertitle>
+                    <a href="https://grok.com/imagine">
+                      <papertitle>Grok Imagine Video</papertitle>
                     </a>
                     <br />
                     Imagine team at xAI,
-                    <strong>worked on post-training</strong>
+                    <strong>post-training</strong>
                     <br />
-                    <em>Public Release</em>, Jan 2026
-                    <br />
-                    <p></p>
-                    <p>
-                      We improved over 0.9 in major aspects and topped
-                      competitive leaderboards.
-                    </p>
-                  </td>
-                </tr>
-                <tr
-                  class="product-row"
-                  onmouseout="grok_imagine_09_stop()"
-                  onmouseover="grok_imagine_09_start()"
-                >
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
-                    <div class="one" style="border: 1.5px solid #000">
-                      <div class="two" id="grok_imagine_09_teaser">
-                        <video width="100%" muted autoplay loop playsinline>
-                          <source
-                            src="assets/grok_imagine_09_after.mp4"
-                            type="video/mp4"
-                          />
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <img
-                        src="assets/grok_imagine_09_before.jpg"
-                        width="100%"
-                      />
-                    </div>
-                    <script type="text/javascript">
-                      function grok_imagine_09_start() {
-                        document.getElementById(
-                          "grok_imagine_09_teaser",
-                        ).style.opacity = "1";
-                      }
-                      function grok_imagine_09_stop() {
-                        document.getElementById(
-                          "grok_imagine_09_teaser",
-                        ).style.opacity = "0";
-                      }
-                      grok_imagine_09_stop();
-                    </script>
-                  </td>
-                  <td style="padding: 20px; width: 75%; vertical-align: middle">
-                    <a href="https://x.com/xai/status/1975607901571199086">
-                      <papertitle>Grok Imagine 0.9</papertitle>
-                    </a>
-                    <br />
-                    Imagine team at xAI,
-                    <strong>worked on post-training</strong>
-                    <br />
-                    <em>Public Release</em>, Oct 2025
-                    <br />
-                    <p></p>
-                    <p>
-                      We rolled out Grok's first generation of video models in 3
-                      months from scratch.
-                    </p>
+                    <a href="https://x.ai/news/grok-imagine-api">v1</a>, Jan
+                    2026 /
+                    <a href="https://x.com/xai/status/1975607901571199086"
+                      >v0.9</a
+                    >, Oct 2025
+                    <!-- <p></p> -->
+                    <!-- <p> -->
+                    <!--   We built Grok's video model from scratch: releasing 0.9 in -->
+                    <!--   3 months and topping leaderboards with 1.0. -->
+                    <!-- </p> -->
                   </td>
                 </tr>
               </tbody>
@@ -361,18 +367,24 @@
                     <em>PhD Thesis</em>, UC Berkeley 2025
                     <br />
                     Advisor:
-                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
-                      >Angjoo Kanazawa</a
-                    >
+                    <span class="authors">
+                      <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                        >Angjoo Kanazawa</a
+                      >
+                    </span>
                     <br />
                     Committee:
-                    <a href="http://people.eecs.berkeley.edu/~malik/"
-                      >Jitendra Malik</a
-                    >,
-                    <a href="https://people.eecs.berkeley.edu/~efros/"
-                      >Alexei Efros</a
-                    >,
-                    <a href="https://shubhtuls.github.io/">Shubham Tulsiani</a>
+                    <span class="authors">
+                      <a href="http://people.eecs.berkeley.edu/~malik/"
+                        >Jitendra Malik</a
+                      >,
+                      <a href="https://people.eecs.berkeley.edu/~efros/"
+                        >Alexei Efros</a
+                      >,
+                      <a href="https://shubhtuls.github.io/"
+                        >Shubham Tulsiani</a
+                      >
+                    </span>
                     <p></p>
                   </td>
                 </tr>
@@ -414,20 +426,24 @@
                       </papertitle>
                     </a>
                     <br />
-                    <a href="https://shallowtoil.github.io/"
-                      >Jensen (Jinghao) Zhou*</a
-                    >, <strong>Hang Gao*</strong>,
-                    <a href="https://voletiv.github.io/">Vikram Voleti</a>,
-                    <a href="https://www.aaryaman.net/">Aaryaman Vasishta</a>,
-                    <a href="https://chhankyao.github.io/">Chun-Han Yao</a>,
-                    <a href="https://markboss.me/">Mark Boss</a>,
-                    <a href="https://eng.ox.ac.uk/people/philip-torr/"
-                      >Philip Torr</a
-                    >,
-                    <a href="https://chrirupp.github.io/"
-                      >Christrian Rupprecht</a
-                    >,
-                    <a href="https://varunjampani.github.io/">Varun Jampani</a>
+                    <span class="authors">
+                      <a href="https://shallowtoil.github.io/"
+                        >Jensen (Jinghao) Zhou*</a
+                      >, <strong>Hang Gao*</strong>,
+                      <a href="https://voletiv.github.io/">Vikram Voleti</a>,
+                      <a href="https://www.aaryaman.net/">Aaryaman Vasishta</a>,
+                      <a href="https://chhankyao.github.io/">Chun-Han Yao</a>,
+                      <a href="https://markboss.me/">Mark Boss</a>,
+                      <a href="https://eng.ox.ac.uk/people/philip-torr/"
+                        >Philip Torr</a
+                      >,
+                      <a href="https://chrirupp.github.io/"
+                        >Christrian Rupprecht</a
+                      >,
+                      <a href="https://varunjampani.github.io/"
+                        >Varun Jampani</a
+                      >
+                    </span>
                     <br />
                     <em>ICCV</em>, 2025
                     <br />
@@ -441,11 +457,11 @@
                       href="https://github.com/Stability-AI/stable-virtual-camera"
                       >code</a
                     >
-                    <p></p>
-                    <p>
-                      We build a multi-view diffusion model for view synthesis
-                      from as few as a single image.
-                    </p>
+                    <!-- <p></p> -->
+                    <!-- <p> -->
+                    <!--   We build a multi-view diffusion model for view synthesis -->
+                    <!--   from as few as a single image. -->
+                    <!-- </p> -->
                   </td>
                 </tr>
                 <tr
@@ -487,18 +503,20 @@
                       >
                     </a>
                     <br />
-                    <a href="https://qianqianwang68.github.io/"
-                      >Qianqian Wang*</a
-                    >,
-                    <a href="https://people.eecs.berkeley.edu/~vye/"
-                      >Vickie Ye*</a
-                    >, <strong>Hang Gao*</strong>,
-                    <a href="https://www.linkedin.com/in/jakeaustin4701/"
-                      >Jake Austin</a
-                    >, <a href="https://zhengqili.github.io/">Zhengqi Li</a>,
-                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
-                      >Angjoo Kanazawa</a
-                    >
+                    <span class="authors">
+                      <a href="https://qianqianwang68.github.io/"
+                        >Qianqian Wang*</a
+                      >,
+                      <a href="https://people.eecs.berkeley.edu/~vye/"
+                        >Vickie Ye*</a
+                      >, <strong>Hang Gao*</strong>,
+                      <a href="https://www.linkedin.com/in/jakeaustin4701/"
+                        >Jake Austin</a
+                      >, <a href="https://zhengqili.github.io/">Zhengqi Li</a>,
+                      <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                        >Angjoo Kanazawa</a
+                      >
+                    </span>
                     <br />
                     <em>ICCV</em>, 2025
                     <font color="red"><strong>(Spotlight)</strong></font>
@@ -510,11 +528,11 @@
                     <a href="https://arxiv.org/abs/2407.13764">arXiv</a>
                     /
                     <a href="https://github.com/vye16/shape-of-motion/">code</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We propose a method for joint 4D reconstruction and 3D
                       tracking on internet footages.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr
@@ -555,11 +573,13 @@
                       >
                     </a>
                     <br />
-                    <a href="https://panzhy.com/">Zhuoyang Pan*</a>,
-                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
-                      >Angjoo Kanazawa</a
-                    >,
-                    <strong>Hang Gao*</strong>
+                    <span class="authors">
+                      <a href="https://panzhy.com/">Zhuoyang Pan*</a>,
+                      <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                        >Angjoo Kanazawa</a
+                      >,
+                      <strong>Hang Gao*</strong>
+                    </span>
                     <br />
                     <em>arXiv</em>, 2024
                     <br />
@@ -568,11 +588,11 @@
                     <a href="https://arxiv.org/abs/2407.13764">arXiv</a>
                     /
                     <a href="https://github.com/hangg7/soar">code</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We recover complete human avatars from self-occluded
                       videos in the wild.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr
@@ -615,12 +635,15 @@
                       >
                     </a>
                     <br />
-                    <a href="https://www.liruilong.cn/">Ruilong Li</a>,
-                    <strong>Hang Gao</strong>,
-                    <a href="https://www.matthewtancik.com/">Matthew Tancik</a>,
-                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
-                      >Angjoo Kanazawa</a
-                    >
+                    <span class="authors">
+                      <a href="https://www.liruilong.cn/">Ruilong Li</a>,
+                      <strong>Hang Gao</strong>,
+                      <a href="https://www.matthewtancik.com/">Matthew Tancik</a
+                      >,
+                      <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                        >Angjoo Kanazawa</a
+                      >
+                    </span>
                     <br />
                     <em>ICCV</em>, 2023
                     <br />
@@ -629,11 +652,11 @@
                     <a href="https://arxiv.org/abs/2305.04966">arXiv</a>
                     /
                     <a href="https://github.com/KAIR-BAIR/nerfacc/">code</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We build and release a toolbox for accelerating all kinds
                       of NeRFs by efficient sampling.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr
@@ -676,13 +699,15 @@
                       >
                     </a>
                     <br />
-                    <strong>Hang Gao</strong>,
-                    <a href="https://www.liruilong.cn/">Ruilong Li</a>,
-                    <a href="https://shubhtuls.github.io/">Shubham Tulsiani</a>,
-                    <a href="https://bryanrussell.org/">Bryan Russell</a>,
-                    <a href="https://people.eecs.berkeley.edu/~kanazawa/"
-                      >Angjoo Kanazawa</a
-                    >
+                    <span class="authors">
+                      <strong>Hang Gao</strong>,
+                      <a href="https://www.liruilong.cn/">Ruilong Li</a>,
+                      <a href="https://shubhtuls.github.io/">Shubham Tulsiani</a
+                      >, <a href="https://bryanrussell.org/">Bryan Russell</a>,
+                      <a href="https://people.eecs.berkeley.edu/~kanazawa/"
+                        >Angjoo Kanazawa</a
+                      >
+                    </span>
                     <br />
                     <em>NeurIPS</em>, 2022
                     <br />
@@ -691,11 +716,11 @@
                     <a href="https://arxiv.org/abs/2210.13445">arXiv</a>
                     /
                     <a href="https://github.com/KAIR-BAIR/dycheck/">code</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We systematically show why and how existing 4D
                       reconstruction methods don't work well in the wild.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr
@@ -730,18 +755,20 @@
                       >
                     </a>
                     <br />
-                    <a href="https://zhec.github.io/">Zhe Cao</a>,
-                    <strong>Hang Gao</strong>,
-                    <a href="https://karttikeya.github.io/"
-                      >Karttikeya Mangalam</a
-                    >,
-                    <a
-                      href="https://scholar.google.com/citations?user=oyh-YNwAAAAJ&hl=en"
-                      >Qi-Zhi Cai</a
-                    >, <a href="https://minhpvo.github.io/">Minh Vo</a>,
-                    <a href="http://people.eecs.berkeley.edu/~malik/"
-                      >Jitendra Malik</a
-                    >
+                    <span class="authors">
+                      <a href="https://zhec.github.io/">Zhe Cao</a>,
+                      <strong>Hang Gao</strong>,
+                      <a href="https://karttikeya.github.io/"
+                        >Karttikeya Mangalam</a
+                      >,
+                      <a
+                        href="https://scholar.google.com/citations?user=oyh-YNwAAAAJ&hl=en"
+                        >Qi-Zhi Cai</a
+                      >, <a href="https://minhpvo.github.io/">Minh Vo</a>,
+                      <a href="http://people.eecs.berkeley.edu/~malik/"
+                        >Jitendra Malik</a
+                      >
+                    </span>
                     <br />
                     <em>ECCV</em>, 2020 &nbsp
                     <font color="red"
@@ -753,11 +780,11 @@
                     <a href="https://arxiv.org/abs/2007.03672">arXiv</a>
                     /
                     <a href="https://github.com/ZheC/GTA-IM-Dataset">code</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We predict long-term, diverse human motion in 3D by
                       understanding scene context from an image.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr
@@ -792,16 +819,18 @@
                       </papertitle>
                     </a>
                     <br />
-                    <strong>Hang Gao*</strong>,
-                    <a
-                      href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en"
-                      >Xizhou Zhu*</a
-                    >,
-                    <a
-                      href="https://scholar.google.com/citations?user=c3PYmxUAAAAJ&hl=en&oi=ao"
-                      >Steve Lin</a
-                    >,
-                    <a href="https://jifengdai.org/">Jifeng Dai</a>
+                    <span class="authors">
+                      <strong>Hang Gao*</strong>,
+                      <a
+                        href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en"
+                        >Xizhou Zhu*</a
+                      >,
+                      <a
+                        href="https://scholar.google.com/citations?user=c3PYmxUAAAAJ&hl=en&oi=ao"
+                        >Steve Lin</a
+                      >,
+                      <a href="https://jifengdai.org/">Jifeng Dai</a>
+                    </span>
                     <br />
                     <em>ICLR</em>, 2020
                     <br />
@@ -814,11 +843,11 @@
                     <a href="https://github.com/hangg7/deformable-kernels/"
                       >code</a
                     >
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We propose a new convolutional operator that does
                       attention in the kernel space.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr class="paper-row">
@@ -834,29 +863,31 @@
                       >
                     </a>
                     <br />
-                    <a href="https://roeiherz.github.io/">Roei Herzig*</a>,
-                    <a
-                      href="https://scholar.google.com/citations?user=TQw8WLEAAAAJ&hl=en&oi=sra"
-                      >Elad Levi*</a
-                    >,
-                    <a href="https://visionlanguagelab.github.io/"
-                      >Huijuan Xu*</a
-                    >, <strong>Hang Gao</strong>, Eli Brosh,
-                    <a href="https://xiaolonw.github.io/">Xiaolong Wang</a>,
-                    <a href="https://cs3801.wixsite.com/amirgloberson"
-                      >Amir Globerson</a
-                    >,
-                    <a href="https://people.eecs.berkeley.edu/~trevor/"
-                      >Trevor Darrell</a
-                    >
+                    <span class="authors">
+                      <a href="https://roeiherz.github.io/">Roei Herzig*</a>,
+                      <a
+                        href="https://scholar.google.com/citations?user=TQw8WLEAAAAJ&hl=en&oi=sra"
+                        >Elad Levi*</a
+                      >,
+                      <a href="https://visionlanguagelab.github.io/"
+                        >Huijuan Xu*</a
+                      >, <strong>Hang Gao</strong>, Eli Brosh,
+                      <a href="https://xiaolonw.github.io/">Xiaolong Wang</a>,
+                      <a href="https://cs3801.wixsite.com/amirgloberson"
+                        >Amir Globerson</a
+                      >,
+                      <a href="https://people.eecs.berkeley.edu/~trevor/"
+                        >Trevor Darrell</a
+                      >
+                    </span>
                     <br />
                     <em>ICCV Workshop</em>, 2019
                     <br />
                     <a href="http://arxiv.org/abs/1812.01233">arXiv</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We find relational graph useful for action recognition.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr class="paper-row">
@@ -873,28 +904,30 @@
                       </papertitle>
                     </a>
                     <br />
-                    <strong>Hang Gao*</strong>,
-                    <a href="http://hxu.rocks/">Huazhe Xu</a>,
-                    <a
-                      href="https://scholar.google.com/citations?user=oyh-YNwAAAAJ&hl=en"
-                      >Qi-Zhi Cai</a
-                    >,
-                    <a
-                      href="https://scholar.google.com/citations?user=qrHfaicAAAAJ&hl=en&oi=sra"
-                      >Ruth Wang</a
-                    >, <a href="https://www.yf.io/">Fisher Yu</a>,
-                    <a href="https://people.eecs.berkeley.edu/~trevor/"
-                      >Trevor Darrell</a
-                    >
+                    <span class="authors">
+                      <strong>Hang Gao*</strong>,
+                      <a href="http://hxu.rocks/">Huazhe Xu</a>,
+                      <a
+                        href="https://scholar.google.com/citations?user=oyh-YNwAAAAJ&hl=en"
+                        >Qi-Zhi Cai</a
+                      >,
+                      <a
+                        href="https://scholar.google.com/citations?user=qrHfaicAAAAJ&hl=en&oi=sra"
+                        >Ruth Wang</a
+                      >, <a href="https://www.yf.io/">Fisher Yu</a>,
+                      <a href="https://people.eecs.berkeley.edu/~trevor/"
+                        >Trevor Darrell</a
+                      >
+                    </span>
                     <br />
                     <em>ICCV</em>, 2019
                     <br />
                     <a href="https://arxiv.org/abs/1812.00452">arXiv</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We make a system that propagates seen parts and generates
                       unseen ones.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr
@@ -929,26 +962,28 @@
                       </papertitle>
                     </a>
                     <br />
-                    <strong>Hang Gao</strong>,
-                    <a href="http://www.columbia.edu/~zs2262/">Zheng Shou</a>,
-                    <a
-                      href="https://scholar.google.com/citations?user=Ioe0SGsAAAAJ&hl=en"
-                      >Alireza Zareian</a
-                    >,
-                    <a href="https://mreallab.github.io/index.html"
-                      >Hanwang Zhang</a
-                    >,
-                    <a href="https://www.ee.columbia.edu/~sfchang/"
-                      >Shih-Fu Chang</a
-                    >
+                    <span class="authors">
+                      <strong>Hang Gao</strong>,
+                      <a href="http://www.columbia.edu/~zs2262/">Zheng Shou</a>,
+                      <a
+                        href="https://scholar.google.com/citations?user=Ioe0SGsAAAAJ&hl=en"
+                        >Alireza Zareian</a
+                      >,
+                      <a href="https://mreallab.github.io/index.html"
+                        >Hanwang Zhang</a
+                      >,
+                      <a href="https://www.ee.columbia.edu/~sfchang/"
+                        >Shih-Fu Chang</a
+                      >
+                    </span>
                     <br />
                     <em>NeurIPS</em>, 2018
                     <br />
                     <a href="https://arxiv.org/abs/1810.11730">arXiv</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We learn feature augmentation for low-shot classifiers.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr class="paper-row">
@@ -965,27 +1000,29 @@
                       </papertitle>
                     </a>
                     <br />
-                    <a href="http://www.columbia.edu/~zs2262/">Zheng Shou</a>,
-                    <strong>Hang Gao</strong>,
-                    <a href="https://www.leizhang.org/">Lei Zhang</a>,
-                    <a
-                      href="https://scholar.google.com/citations?user=P_GRGwoAAAAJ&hl=en&oi=sra"
-                      >Kazuyuki Miyazawa</a
-                    >,
-                    <a href="https://www.ee.columbia.edu/~sfchang/"
-                      >Shih-Fu Chang</a
-                    >
+                    <span class="authors">
+                      <a href="http://www.columbia.edu/~zs2262/">Zheng Shou</a>,
+                      <strong>Hang Gao</strong>,
+                      <a href="https://www.leizhang.org/">Lei Zhang</a>,
+                      <a
+                        href="https://scholar.google.com/citations?user=P_GRGwoAAAAJ&hl=en&oi=sra"
+                        >Kazuyuki Miyazawa</a
+                      >,
+                      <a href="https://www.ee.columbia.edu/~sfchang/"
+                        >Shih-Fu Chang</a
+                      >
+                    </span>
                     <br />
                     <em>ECCV</em>, 2018
                     <br />
                     <a href="https://arxiv.org/abs/1807.08333">arXiv</a>
                     /
                     <a href="https://github.com/zhengshou/AutoLoc/">code</a>
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We propose a weakly-supervised method for temporal action
                       localization.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
                 <tr class="paper-row">
@@ -1002,32 +1039,35 @@
                       </papertitle>
                     </a>
                     <br />
-                    <a href="https://shawnnxu.github.io/">Xiangyu Xu</a>,
-                    <strong>Hang Gao</strong>,
-                    <a href="https://www.cs.sjtu.edu.cn/~jdyu/">Jiadi Yu</a>,
-                    <a
-                      href="https://scholar.google.com/citations?user=jCZaWOEAAAAJ&hl=en&oi=sra"
-                      >Yingying Chen</a
-                    >,
-                    <a href="https://www.cs.sjtu.edu.cn/~yzhu/">Yanmin Zhu</a>,
-                    <a href="https://www.cs.sjtu.edu.cn/~xue-gt/"
-                      >Guangtao Xue</a
-                    >,
-                    <a
-                      href="https://scholar.google.com/citations?user=cFW1n8YAAAAJ&hl=en"
-                      >Minglu Li</a
-                    >
+                    <span class="authors">
+                      <a href="https://shawnnxu.github.io/">Xiangyu Xu</a>,
+                      <strong>Hang Gao</strong>,
+                      <a href="https://www.cs.sjtu.edu.cn/~jdyu/">Jiadi Yu</a>,
+                      <a
+                        href="https://scholar.google.com/citations?user=jCZaWOEAAAAJ&hl=en&oi=sra"
+                        >Yingying Chen</a
+                      >,
+                      <a href="https://www.cs.sjtu.edu.cn/~yzhu/">Yanmin Zhu</a
+                      >,
+                      <a href="https://www.cs.sjtu.edu.cn/~xue-gt/"
+                        >Guangtao Xue</a
+                      >,
+                      <a
+                        href="https://scholar.google.com/citations?user=cFW1n8YAAAAJ&hl=en"
+                        >Minglu Li</a
+                      >
+                    </span>
                     <br />
                     <em>INFOCOM</em>, 2017
                     <br />
                     <a href="https://ieeexplore.ieee.org/document/8057022"
                       >IEEE</a
                     >
-                    <p></p>
+                    <!-- <p></p>
                     <p>
                       We build an audio-based mobile app for inattentive driving
                       detection.
-                    </p>
+                    </p> -->
                   </td>
                 </tr>
               </tbody>
@@ -1050,7 +1090,7 @@
                       Thanks
                       <a href="https://jonbarron.info">Jon</a>!
                       <br />
-                      Last updated February 2026.
+                      Last updated July 2026.
                     </font>
                   </p>
                 </td>
