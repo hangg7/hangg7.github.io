@@ -4,15 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal academic portfolio website for Hang Gao. Static HTML/CSS site hosted on GitHub Pages at hangg7.com. No build system or package manager — everything is hand-written and production-ready as committed.
+Personal academic portfolio website for Hang Gao. Static HTML/CSS site hosted on GitHub Pages at hangg7.com. Hand-written HTML/CSS — no framework or package manager, and no local build step. A lightweight GitHub Actions workflow assembles the published site at deploy time (see Deployment).
 
 ## Development
 
 - **Local server**: Use `/live-server` skill or `npx live-server --port=8081 --host=0.0.0.0`
 - **Mobile testing**: Access via LAN IP on port 8081 (run `ipconfig getifaddr en0` to find IP)
-- **Deployment**: Push to `main` branch — GitHub Pages serves automatically
+- **Deployment**: Push to `main` — the GitHub Actions workflow `.github/workflows/deploy.yml` flattens `pages/*` to the site root and publishes. The Pages source is set to **GitHub Actions** (not branch deploy).
 
 ## Architecture
+
+### Repository Layout
+Standalone project pages live under `pages/` (e.g. `pages/dycheck/`, `pages/eva/`, `pages/deformable-kernels/`), each fully self-contained with its own assets. The deploy workflow **flattens `pages/*` to the site root**, so they are served at `hangg7.com/dycheck/`, `/eva/`, `/deformable-kernels/` — *not* under `/pages/...`. The homepage `index.html` and shared `assets/` stay at the repo root. To add a project page, create `pages/<name>/`; no workflow change is needed.
+
+**Local preview caveat**: `/live-server` serves the repo as-is, so locally a project page is at `localhost:8081/pages/dycheck/`, whereas in production it is `/dycheck/`.
 
 ### Layout System
 Table-based layout with a max-width 800px centered container. Two-column grid: 25% image / 75% text, with uniform `2.5%` padding across all sections (profile, product, research) for consistent left/right edge alignment.
